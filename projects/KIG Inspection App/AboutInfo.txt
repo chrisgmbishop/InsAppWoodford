@@ -1,0 +1,7 @@
+﻿Manufacturer=Microsoft Corporation
+ProductTitle=KS Inspections
+ProductSubTitle=
+PoweredBy=Powered by Resco
+Icon=Logo.png
+Website=https://dynamics.microsoft.com/
+SupportEmail=chris@bishoptechconsulting.com
