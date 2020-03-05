@@ -9,14 +9,14 @@
         <property schema="partyid"/>
       </properties>
       <indexes>
-        <index schema="idx_activityparty_partyid" issystem="true">
-          <fields>
-            <field schema="partyid"/>
-          </fields>
-        </index>
         <index schema="idx_activityparty_activityid" issystem="true">
           <fields>
             <field schema="activityid"/>
+          </fields>
+        </index>
+        <index schema="idx_activityparty_partyid" issystem="true">
+          <fields>
+            <field schema="partyid"/>
           </fields>
         </index>
       </indexes>
@@ -26,14 +26,14 @@
         <property schema="activitytypecode"/>
       </properties>
       <indexes>
-        <index schema="idx_appointment_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_appointment_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_appointment_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_appointment_subject" issystem="true">
@@ -106,14 +106,14 @@
         <property schema="regardingobjectid"/>
       </properties>
       <indexes>
-        <index schema="idx_duplicaterulecondition_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_duplicaterulecondition_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_duplicaterulecondition_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
       </indexes>
@@ -123,14 +123,14 @@
         <property schema="activitytypecode"/>
       </properties>
       <indexes>
-        <index schema="idx_email_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_email_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_email_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_email_subject" issystem="true">
@@ -150,6 +150,11 @@
         <property schema="invoicedetailname"/>
       </properties>
       <indexes>
+        <index schema="idx_invoicedetail_uomid" issystem="true">
+          <fields>
+            <field schema="uomid"/>
+          </fields>
+        </index>
         <index schema="idx_invoicedetail_invoiceid" issystem="true">
           <fields>
             <field schema="invoiceid"/>
@@ -168,11 +173,6 @@
         <index schema="idx_invoicedetail_productid" issystem="true">
           <fields>
             <field schema="productid"/>
-          </fields>
-        </index>
-        <index schema="idx_invoicedetail_uomid" issystem="true">
-          <fields>
-            <field schema="uomid"/>
           </fields>
         </index>
         <index schema="idx_invoicedetail_invoicedetailname" issystem="true">
@@ -195,14 +195,14 @@
             <field schema="msdyn_product"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
+          <fields>
+            <field schema="msdyn_masterasset"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
           <fields>
             <field schema="msdyn_account"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
-          <fields>
-            <field schema="msdyn_customerassetcategory"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_parentasset" issystem="true">
@@ -210,14 +210,14 @@
             <field schema="msdyn_parentasset"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
-          <fields>
-            <field schema="msdyn_masterasset"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_customerasset_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
+          <fields>
+            <field schema="msdyn_customerassetcategory"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_name" issystem="true">
@@ -229,7 +229,13 @@
     </entity>
     <entity schema="msdyn_fieldservicesetting">
       <properties>
-        <property schema="msdyn_lastreported" disabled="1"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="msdyn_fieldservicesettingid"/>
+        <property schema="msdyn_name"/>
+        <property schema="ownerid"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
       </properties>
       <indexes>
         <index schema="idx_msdyn_fieldservicesetting_ownerid" issystem="true">
@@ -333,54 +339,9 @@
         <property schema="transactioncurrencyid" disabled="1"/>
       </properties>
       <indexes>
-        <index schema="idx_msdyn_workorder_msdyn_workordertype" issystem="true">
-          <fields>
-            <field schema="msdyn_workordertype"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_parentworkorder" issystem="true">
-          <fields>
-            <field schema="msdyn_parentworkorder"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_reportedbycontact" issystem="true">
-          <fields>
-            <field schema="msdyn_reportedbycontact"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_serviceterritory" issystem="true">
-          <fields>
-            <field schema="msdyn_serviceterritory"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_serviceaccount" issystem="true">
-          <fields>
-            <field schema="msdyn_serviceaccount"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_billingaccount" issystem="true">
-          <fields>
-            <field schema="msdyn_billingaccount"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_customerasset" issystem="true">
-          <fields>
-            <field schema="msdyn_customerasset"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_substatus" issystem="true">
-          <fields>
-            <field schema="msdyn_substatus"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_workorder_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_closedby" issystem="true">
-          <fields>
-            <field schema="msdyn_closedby"/>
           </fields>
         </index>
         <index schema="idx_msdyn_workorder_msdyn_primaryincidenttype" issystem="true">
@@ -388,9 +349,39 @@
             <field schema="msdyn_primaryincidenttype"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_workorder_createdby" issystem="true">
+        <index schema="idx_msdyn_workorder_msdyn_billingaccount" issystem="true">
           <fields>
-            <field schema="createdby"/>
+            <field schema="msdyn_billingaccount"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_serviceterritory" issystem="true">
+          <fields>
+            <field schema="msdyn_serviceterritory"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_parentworkorder" issystem="true">
+          <fields>
+            <field schema="msdyn_parentworkorder"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_priority" issystem="true">
+          <fields>
+            <field schema="msdyn_priority"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_substatus" issystem="true">
+          <fields>
+            <field schema="msdyn_substatus"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_customerasset" issystem="true">
+          <fields>
+            <field schema="msdyn_customerasset"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_reportedbycontact" issystem="true">
+          <fields>
+            <field schema="msdyn_reportedbycontact"/>
           </fields>
         </index>
         <index schema="idx_msdyn_workorder_msdyn_supportcontact" issystem="true">
@@ -398,14 +389,29 @@
             <field schema="msdyn_supportcontact"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_workorder_msdyn_closedby" issystem="true">
+          <fields>
+            <field schema="msdyn_closedby"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_workorder_msdyn_servicerequest" issystem="true">
           <fields>
             <field schema="msdyn_servicerequest"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_workorder_msdyn_priority" issystem="true">
+        <index schema="idx_msdyn_workorder_msdyn_serviceaccount" issystem="true">
           <fields>
-            <field schema="msdyn_priority"/>
+            <field schema="msdyn_serviceaccount"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_msdyn_workordertype" issystem="true">
+          <fields>
+            <field schema="msdyn_workordertype"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_workorder_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_msdyn_workorder_msdyn_name" issystem="true">
@@ -420,14 +426,14 @@
         <property schema="activitytypecode"/>
       </properties>
       <indexes>
-        <index schema="idx_phonecall_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_phonecall_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_phonecall_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_phonecall_subject" issystem="true">
@@ -452,6 +458,11 @@
             <field schema="uomid"/>
           </fields>
         </index>
+        <index schema="idx_quotedetail_quoteid" issystem="true">
+          <fields>
+            <field schema="quoteid"/>
+          </fields>
+        </index>
         <index schema="idx_quotedetail_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
@@ -465,11 +476,6 @@
         <index schema="idx_quotedetail_productid" issystem="true">
           <fields>
             <field schema="productid"/>
-          </fields>
-        </index>
-        <index schema="idx_quotedetail_quoteid" issystem="true">
-          <fields>
-            <field schema="quoteid"/>
           </fields>
         </index>
         <index schema="idx_quotedetail_quotedetailname" issystem="true">
@@ -492,14 +498,14 @@
         <property schema="resco_text"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_chatcomment_resco_chatpostid" issystem="true">
-          <fields>
-            <field schema="resco_chatpostid"/>
-          </fields>
-        </index>
         <index schema="idx_resco_chatcomment_resco_chatuserid" issystem="true">
           <fields>
             <field schema="resco_chatuserid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatcomment_resco_chatpostid" issystem="true">
+          <fields>
+            <field schema="resco_chatpostid"/>
           </fields>
         </index>
         <index schema="idx_resco_chatcomment_ownerid" issystem="true">
@@ -528,11 +534,6 @@
         <property schema="resco_text"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_chatpost_resco_chatuserid" issystem="true">
-          <fields>
-            <field schema="resco_chatuserid"/>
-          </fields>
-        </index>
         <index schema="idx_resco_chatpost_resco_chattopicid" issystem="true">
           <fields>
             <field schema="resco_chattopicid"/>
@@ -541,6 +542,11 @@
         <index schema="idx_resco_chatpost_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_chatpost_resco_chatuserid" issystem="true">
+          <fields>
+            <field schema="resco_chatuserid"/>
           </fields>
         </index>
         <index schema="idx_resco_chatpost_resco_name" issystem="true">
@@ -665,6 +671,11 @@
         <property schema="versionnumber"/>
       </properties>
       <indexes>
+        <index schema="idx_resco_devicecontrol_modifiedonbehalfby" issystem="true">
+          <fields>
+            <field schema="modifiedonbehalfby"/>
+          </fields>
+        </index>
         <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
           <fields>
             <field schema="owninguser"/>
@@ -698,11 +709,6 @@
         <index schema="idx_resco_devicecontrol_createdby" issystem="true">
           <fields>
             <field schema="createdby"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_devicecontrol_modifiedonbehalfby" issystem="true">
-          <fields>
-            <field schema="modifiedonbehalfby"/>
           </fields>
         </index>
         <index schema="idx_resco_devicecontrol_ownerid" issystem="true">
@@ -755,9 +761,9 @@
         <property schema="statuscode"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_question_resco_questionnaireid" issystem="true">
+        <index schema="idx_resco_question_createdby" issystem="true">
           <fields>
-            <field schema="resco_questionnaireid"/>
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_question_resco_questiongroupid" issystem="true">
@@ -765,14 +771,14 @@
             <field schema="resco_questiongroupid"/>
           </fields>
         </index>
+        <index schema="idx_resco_question_resco_questionnaireid" issystem="true">
+          <fields>
+            <field schema="resco_questionnaireid"/>
+          </fields>
+        </index>
         <index schema="idx_resco_question_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
-          </fields>
-        </index>
-        <index schema="idx_resco_question_createdby" issystem="true">
-          <fields>
-            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_question_resco_name" issystem="true">
@@ -804,9 +810,9 @@
         <property schema="statuscode"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_questiongroup_resco_templategroupid" issystem="true">
+        <index schema="idx_resco_questiongroup_ownerid" issystem="true">
           <fields>
-            <field schema="resco_templategroupid"/>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_resco_questiongroup_createdby" issystem="true">
@@ -819,9 +825,9 @@
             <field schema="resco_questionnaireid"/>
           </fields>
         </index>
-        <index schema="idx_resco_questiongroup_ownerid" issystem="true">
+        <index schema="idx_resco_questiongroup_resco_templategroupid" issystem="true">
           <fields>
-            <field schema="ownerid"/>
+            <field schema="resco_templategroupid"/>
           </fields>
         </index>
         <index schema="idx_resco_questiongroup_resco_name" issystem="true">
@@ -906,9 +912,9 @@
         <property schema="statuscode"/>
       </properties>
       <indexes>
-        <index schema="idx_resco_questionnairefolder_createdby" issystem="true">
+        <index schema="idx_resco_questionnairefolder_ownerid" issystem="true">
           <fields>
-            <field schema="createdby"/>
+            <field schema="ownerid"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnairefolder_resco_parentid" issystem="true">
@@ -916,9 +922,9 @@
             <field schema="resco_parentid"/>
           </fields>
         </index>
-        <index schema="idx_resco_questionnairefolder_ownerid" issystem="true">
+        <index schema="idx_resco_questionnairefolder_createdby" issystem="true">
           <fields>
-            <field schema="ownerid"/>
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnairefolder_resco_name" issystem="true">
@@ -933,9 +939,9 @@
         <property schema="activitytypecode"/>
       </properties>
       <indexes>
-        <index schema="idx_serviceappointment_regardingobjectid" issystem="true">
+        <index schema="idx_serviceappointment_serviceid" issystem="true">
           <fields>
-            <field schema="regardingobjectid"/>
+            <field schema="serviceid"/>
           </fields>
         </index>
         <index schema="idx_serviceappointment_ownerid" issystem="true">
@@ -943,9 +949,9 @@
             <field schema="ownerid"/>
           </fields>
         </index>
-        <index schema="idx_serviceappointment_serviceid" issystem="true">
+        <index schema="idx_serviceappointment_regardingobjectid" issystem="true">
           <fields>
-            <field schema="serviceid"/>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_serviceappointment_subject" issystem="true">
@@ -965,11 +971,6 @@
         <property schema="accessmode"/>
       </properties>
       <indexes>
-        <index schema="idx_systemuser_transactioncurrencyid" issystem="true">
-          <fields>
-            <field schema="transactioncurrencyid"/>
-          </fields>
-        </index>
         <index schema="idx_systemuser_siteid" issystem="true">
           <fields>
             <field schema="siteid"/>
@@ -978,6 +979,11 @@
         <index schema="idx_systemuser_businessunitid" issystem="true">
           <fields>
             <field schema="businessunitid"/>
+          </fields>
+        </index>
+        <index schema="idx_systemuser_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
           </fields>
         </index>
         <index schema="idx_systemuser_fullname" issystem="true">
@@ -992,14 +998,14 @@
         <property schema="activitytypecode"/>
       </properties>
       <indexes>
-        <index schema="idx_task_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
         <index schema="idx_task_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_task_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
           </fields>
         </index>
         <index schema="idx_task_subject" issystem="true">
