@@ -3,7 +3,7 @@
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding />
+    <ClassBinding/>
   </Attributes>
   <Name>Questionnaire Templates Lookup</Name>
   <Kind>LookupList</Kind>
@@ -29,7 +29,8 @@
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition value="1" attribute="resco_istemplate" operator="eq" />
+        <condition attribute="resco_istemplate" operator="eq" value="1"/>
+        <condition attribute="statuscode" operator="eq" value="473220002"/>
       </filter>
     </entity>
   </Fetch>
@@ -50,5 +51,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties />
+  <CustomProperties/>
 </EntityList>
