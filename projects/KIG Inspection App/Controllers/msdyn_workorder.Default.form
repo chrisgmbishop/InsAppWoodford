@@ -283,14 +283,13 @@
         <DetailItem SchemaName="msdyn_substatus">
           <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_workordersubstatus"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_workordersubstatus"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_systemstatus" operator="eq" value="{{msdyn_systemstatus}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
         </DetailItem>
-        <DetailItem SchemaName="msdyn_priority"/>
+        <DetailItem SchemaName="btc_solotechnician"/>
         <DetailItem SchemaName="msdyn_instructions"/>
         <DetailItem SchemaName="btc_parkingarrangements"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="msdyn_primaryincidenttype"/>
-        <DetailItem SchemaName="msdyn_primaryincidentdescription"/>
         <DetailItem SchemaName="msdyn_customerasset">
           <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_account" operator="eq" value="{{msdyn_serviceaccount}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
         </DetailItem>
@@ -340,7 +339,6 @@
         <DetailItem SchemaName="msdyn_stateorprovince"/>
         <DetailItem SchemaName="msdyn_postalcode"/>
         <DetailItem SchemaName="msdyn_country"/>
-        <DetailItem SchemaName="msdyn_serviceterritory"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="3">
@@ -371,25 +369,8 @@
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
-      <Name>Activity List</Name>
-      <Binding SchemaName="activity.regardingobjectid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
-      <Name>Bookings</Name>
-      <CustomName>Bookings</CustomName>
-      <Binding SchemaName="bookableresourcebooking.msdyn_workorder"/>
-      <Views>bookableresourcebooking.BookingList</Views>
-    </FormTab>
     <FormTab xsi:type="SignatureTab" flexiHeight="1">
       <Name>Signature</Name>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" DocCommands="0">
-      <Name>Inspections</Name>
-      <CustomName>Inspections</CustomName>
-      <Binding SchemaName="resco_questionnaire.@virtual"/>
-      <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.*:resco_questionnaire.@Reuse&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
-      <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Reuse:resco_questionnaire.Staged Templates:resco_questionnaire.@Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>
