@@ -39,3 +39,7 @@ If you need to update your Woodford solution to a new version, we recommend the 
 
 **First, back up your Woodford projects.**
 Use the procedure for new installation; however, you need to perform an additional step during the solution import wizard. Dynamics detects that the solution package contains an update for a solution that is already installed. Select Maintain customizations (recommended).
+
+## Links
+[Inspections App Support](https://www.resco.net/support/guides/resco-inspections/ "Resco Inspection Support pages")
+[Resco Mobile apps security guide](https://www.resco.net/resco-mobile-crm-security-guide/ "Woodford app security guide")
