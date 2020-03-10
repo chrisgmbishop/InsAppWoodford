@@ -42,4 +42,5 @@ Use the procedure for new installation; however, you need to perform an addition
 
 ## Links
 [Inspections App Support](https://www.resco.net/support/guides/resco-inspections/ "Resco Inspection Support pages")
+
 [Resco Mobile apps security guide](https://www.resco.net/resco-mobile-crm-security-guide/ "Woodford app security guide")
