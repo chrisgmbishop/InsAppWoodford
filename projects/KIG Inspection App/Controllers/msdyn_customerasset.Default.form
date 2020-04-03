@@ -16,20 +16,29 @@
           <IsConstant>true</IsConstant>
           <AutoGridLayout>1</AutoGridLayout>
         </DetailItem>
-        <DetailItem SchemaName="msdyn_product"/>
         <DetailItem SchemaName="msdyn_name"/>
         <DetailItem SchemaName="msdyn_account"/>
-        <DetailItem SchemaName="msdyn_parentasset">
-          <LookupViews>&lt;lookup&gt;&lt;extra/&gt;&lt;extra&gt;&lt;views&gt;msdyn_customerasset.Default&lt;/views&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
-        </DetailItem>
         <DetailItem SchemaName="msdyn_customerassetcategory"/>
         <DetailItem SchemaName="btc_lastinspected"/>
         <DetailItem SchemaName="btc_installdate"/>
         <DetailItem SchemaName="btc_physicaluid"/>
-        <DetailItem SchemaName="ownerid"/>
+        <DetailItem SchemaName="msdyn_product"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="5" DocCommands="0">
+    <FormTab xsi:type="DetailTab" flexiWidth="1">
+      <Name>System Configuration</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="btc_systembrand"/>
+        <DetailItem SchemaName="btc_useofsystem"/>
+        <DetailItem SchemaName="btc_methodoffixing"/>
+        <DetailItem SchemaName="btc_maxofusers"/>
+        <DetailItem SchemaName="btc_maxuserweight"/>
+        <DetailItem SchemaName="btc_maxspan"/>
+        <DetailItem SchemaName="btc_noofposts"/>
+        <DetailItem SchemaName="btc_noofpendulumposts"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" DocCommands="0" FlipMode="224" ListCommands="4">
       <Name>Inspection Templates</Name>
       <CustomName>Inspection Templates</CustomName>
       <Binding SchemaName="resco_questionnaire.@virtual"/>

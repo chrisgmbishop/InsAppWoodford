@@ -198,9 +198,20 @@
     </entity>
     <entity schema="msdyn_customerasset">
       <properties>
+        <property schema="btc_detailedlocation"/>
         <property schema="btc_installdate"/>
         <property schema="btc_lastinspected"/>
+        <property schema="btc_lengthofsystemft"/>
+        <property schema="btc_maxofusers"/>
+        <property schema="btc_maxspan"/>
+        <property schema="btc_maxuserweight"/>
+        <property schema="btc_methodoffixing"/>
+        <property schema="btc_noofpendulumposts"/>
+        <property schema="btc_noofposts"/>
         <property schema="btc_physicaluid"/>
+        <property schema="btc_specifybrand"/>
+        <property schema="btc_systembrand"/>
+        <property schema="btc_useofsystem"/>
         <property schema="msdyn_customerassetcategory"/>
       </properties>
       <indexes>

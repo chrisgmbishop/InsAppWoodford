@@ -309,6 +309,12 @@
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
     </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
+      <Name>Incidents</Name>
+      <CustomName>Incidents</CustomName>
+      <Binding SchemaName="msdyn_workorderincident.msdyn_workorder"/>
+      <Views>msdyn_workorderincident.DetailedIncidentList</Views>
+    </FormTab>
     <FormTab xsi:type="DetailTab">
       <Name>Other</Name>
       <SerializedChildren>
@@ -340,12 +346,6 @@
         <DetailItem SchemaName="msdyn_postalcode"/>
         <DetailItem SchemaName="msdyn_country"/>
       </SerializedChildren>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3">
-      <Name>Incidents</Name>
-      <CustomName>Incidents</CustomName>
-      <Binding SchemaName="msdyn_workorderincident.msdyn_workorder"/>
-      <Views>msdyn_workorderincident.DetailedIncidentList</Views>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="3">
       <Name>Service Tasks</Name>
