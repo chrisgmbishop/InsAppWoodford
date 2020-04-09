@@ -211,6 +211,7 @@
         <property schema="btc_physicaluid"/>
         <property schema="btc_specifybrand"/>
         <property schema="btc_systembrand"/>
+        <property schema="btc_totallengthofsystemm"/>
         <property schema="btc_useofsystem"/>
         <property schema="msdyn_customerassetcategory"/>
       </properties>
@@ -807,6 +808,7 @@
         <property schema="resco_rawnumericvalue"/>
         <property schema="resco_required"/>
         <property schema="resco_reusefromprevious"/>
+        <property schema="resco_rules"/>
         <property schema="resco_showonreport"/>
         <property schema="resco_style"/>
         <property schema="resco_value"/>

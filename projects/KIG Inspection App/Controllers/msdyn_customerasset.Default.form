@@ -12,7 +12,7 @@
     <FormTab xsi:type="DetailTab" flexiWidth="1" flexiHeader="0">
       <Name>General</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="Asset Image" image="true" Style="FormNoteImage">
+        <DetailItem SchemaName="Asset Image" image="true" imageActions="0" Style="FormNoteImage">
           <IsConstant>true</IsConstant>
           <AutoGridLayout>1</AutoGridLayout>
         </DetailItem>
@@ -31,6 +31,7 @@
         <DetailItem SchemaName="btc_systembrand"/>
         <DetailItem SchemaName="btc_useofsystem"/>
         <DetailItem SchemaName="btc_methodoffixing"/>
+        <DetailItem SchemaName="btc_totallengthofsystemm"/>
         <DetailItem SchemaName="btc_maxofusers"/>
         <DetailItem SchemaName="btc_maxuserweight"/>
         <DetailItem SchemaName="btc_maxspan"/>
