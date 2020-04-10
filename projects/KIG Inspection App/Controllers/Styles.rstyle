@@ -469,6 +469,9 @@
         <Property Name="LabelFontWeight" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="FormEntityImage" Type="DetailItem">
@@ -524,7 +527,7 @@
           <Value>-1</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
-          <Value>2</Value>
+          <Value>3</Value>
         </Property>
         <Property Name="EditorDisabledColor" Type="System.Int32">
           <Value>-1</Value>
@@ -719,6 +722,23 @@
         </Property>
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-65536</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Left Style" Style="Button" Type="DetailItem">
+      <Properties>
+        <Property Name="ButtonColor" Type="System.Int32">
+          <Value>-8406528</Value>
+        </Property>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-8406528</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Right Style" Style="Left Style" Type="DetailItem">
+      <Properties>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>3</Value>
         </Property>
       </Properties>
     </Style>

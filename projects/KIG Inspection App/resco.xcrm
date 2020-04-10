@@ -376,6 +376,8 @@
     <entity schema="msdyn_workorder" xattr="2097152">
       <properties>
         <property schema="btc_parkingarrangements"/>
+        <property schema="btc_powerappdone"/>
+        <property schema="btc_ramssigned"/>
         <property schema="btc_solotechnician"/>
         <property schema="msdyn_iotalert" disabled="1"/>
         <property schema="msdyn_taxcode" disabled="1"/>
