@@ -742,5 +742,21 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="SpacerQ" Style="Normal" Type="DetailItem">
+      <Properties>
+        <Property Name="IsMultiLine" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelAutoWidth" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>3</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>
