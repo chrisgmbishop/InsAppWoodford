@@ -728,10 +728,10 @@
     <Style Name="Left Style" Style="Button" Type="DetailItem">
       <Properties>
         <Property Name="ButtonColor" Type="System.Int32">
-          <Value>-8406528</Value>
+          <Value>-8927385</Value>
         </Property>
         <Property Name="BackgroundColor" Type="System.Int32">
-          <Value>-8406528</Value>
+          <Value>-8927385</Value>
         </Property>
       </Properties>
     </Style>
@@ -755,6 +755,16 @@
         </Property>
         <Property Name="LabelPosition" Type="System.Int32">
           <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="activated" Style="Button" Type="DetailItem">
+      <Properties>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-9131414</Value>
+        </Property>
+        <Property Name="ButtonColor" Type="System.Int32">
+          <Value>-9131414</Value>
         </Property>
       </Properties>
     </Style>
