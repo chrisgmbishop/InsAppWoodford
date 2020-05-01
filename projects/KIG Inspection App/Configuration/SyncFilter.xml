@@ -279,6 +279,7 @@
                 <condition attribute="starttime" operator="today"/>
                 <condition attribute="endtime" operator="next-x-days" value="7"/>
                 <condition attribute="endtime" operator="today"/>
+                <condition attribute="starttime" operator="last-week"/>
               </filter>
             </filter>
             <link-entity name="bookingstatus" alias="L9" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -400,6 +401,7 @@
             <condition attribute="starttime" operator="today"/>
             <condition attribute="endtime" operator="next-x-days" value="30"/>
             <condition attribute="endtime" operator="today"/>
+            <condition attribute="starttime" operator="last-week"/>
           </filter>
         </filter>
         <link-entity name="bookingstatus" alias="L1" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -444,6 +446,7 @@
               <condition attribute="starttime" operator="today"/>
               <condition attribute="endtime" operator="next-x-days" value="30"/>
               <condition attribute="endtime" operator="today"/>
+              <condition attribute="starttime" operator="last-x-days" value="5"/>
             </filter>
           </filter>
         </filter>
@@ -496,6 +499,7 @@
               <condition attribute="starttime" operator="today"/>
               <condition attribute="endtime" operator="next-x-days" value="7"/>
               <condition attribute="endtime" operator="today"/>
+              <condition attribute="starttime" operator="last-week"/>
             </filter>
           </filter>
           <link-entity name="bookingstatus" alias="L2" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -532,10 +536,11 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0"/>
             <filter type="or">
-              <condition attribute="starttime" operator="next-x-days" value="7"/>
+              <condition attribute="starttime" operator="next-x-days" value="30"/>
               <condition attribute="starttime" operator="today"/>
-              <condition attribute="endtime" operator="next-x-days" value="7"/>
+              <condition attribute="endtime" operator="next-x-days" value="30"/>
               <condition attribute="endtime" operator="today"/>
+              <condition attribute="starttime" operator="last-x-days" value="7"/>
             </filter>
           </filter>
           <link-entity name="bookingstatus" alias="L2" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -576,6 +581,7 @@
               <condition attribute="starttime" operator="today"/>
               <condition attribute="endtime" operator="next-x-days" value="7"/>
               <condition attribute="endtime" operator="today"/>
+              <condition attribute="starttime" operator="last-week"/>
             </filter>
           </filter>
           <link-entity name="bookingstatus" alias="L2" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -616,6 +622,7 @@
               <condition attribute="starttime" operator="today"/>
               <condition attribute="endtime" operator="next-x-days" value="7"/>
               <condition attribute="endtime" operator="today"/>
+              <condition attribute="starttime" operator="last-week"/>
             </filter>
           </filter>
           <link-entity name="bookingstatus" alias="L2" from="bookingstatusid" to="bookingstatus" link-type="inner">
