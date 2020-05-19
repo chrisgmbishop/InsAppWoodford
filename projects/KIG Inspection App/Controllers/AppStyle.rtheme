@@ -2,7 +2,7 @@
   <IsCustom>false</IsCustom>
   <Label>All Platforms</Label>
   <IsCustomHome>true</IsCustomHome>
-  <ImagePath>resco:Scandinavian</ImagePath>
+  <ImagePath>resco:Default</ImagePath>
   <colors name="ListBackground" color="PAL:0"/>
   <colors name="ListSelBackground" color="PAL:1"/>
   <colors name="ListForeground" color="PAL:2"/>

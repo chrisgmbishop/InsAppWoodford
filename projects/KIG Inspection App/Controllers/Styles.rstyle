@@ -768,5 +768,28 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="Notice" Style="SpacerQ" Type="DetailItem">
+      <Properties>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-65536</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="LabelForegroundColor" Type="System.Int32">
+          <Value>-65536</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Notice1" Style="Left Style" Type="DetailItem">
+      <Properties>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-1048832</Value>
+        </Property>
+        <Property Name="ButtonColor" Type="System.Int32">
+          <Value>-1048832</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>
