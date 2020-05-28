@@ -307,6 +307,7 @@
         <property schema="btc_standardsselectionfsgr"/>
         <property schema="btc_systembrand"/>
         <property schema="btc_totallengthofsystemm"/>
+        <property schema="btc_upstandparapetpresent"/>
         <property schema="btc_useofsystem"/>
         <property schema="btc_whattypeofmembranesurfaceinstalledon"/>
         <property schema="msdyn_customerassetcategory"/>

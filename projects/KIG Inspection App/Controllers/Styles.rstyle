@@ -453,6 +453,12 @@
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
         </Property>
+        <Property Name="EditorFontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="LabelFontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="MultiLine" Type="DetailItem">
@@ -784,10 +790,19 @@
     <Style Name="Notice1" Style="Left Style" Type="DetailItem">
       <Properties>
         <Property Name="BackgroundColor" Type="System.Int32">
-          <Value>-1048832</Value>
+          <Value>-2562560</Value>
         </Property>
         <Property Name="ButtonColor" Type="System.Int32">
-          <Value>-1048832</Value>
+          <Value>-2562560</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-16777216</Value>
+        </Property>
+        <Property Name="EditorFontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
+        </Property>
+        <Property Name="LabelFontName" Type="System.String">
+          <Value>Roboto-Regular</Value>
         </Property>
       </Properties>
     </Style>
