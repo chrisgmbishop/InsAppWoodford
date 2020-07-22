@@ -806,5 +806,27 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="Alert Style" Style="Left Style" Type="DetailItem">
+      <Properties>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-578770</Value>
+        </Property>
+        <Property Name="ButtonColor" Type="System.Int32">
+          <Value>-578770</Value>
+        </Property>
+        <Property Name="IsMultiLine" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelAutoHeight" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="WrapText" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+        <Property Name="LabelAutoWidth" Type="System.Boolean">
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>
