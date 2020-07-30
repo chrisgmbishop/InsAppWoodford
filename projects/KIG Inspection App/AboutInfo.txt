@@ -1,5 +1,5 @@
 ﻿Manufacturer=Microsoft Corporation
-ProductTitle=KS Inspections
+ProductTitle=Inspections
 ProductSubTitle=
 PoweredBy=Powered by Resco
 Icon=Logo.png

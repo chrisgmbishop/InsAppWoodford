@@ -173,7 +173,7 @@
   </ClassBinding>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiCollapsed="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>Booking</Name>
       <SerializedChildren>
         <DetailItem SchemaName="name"/>
@@ -201,17 +201,17 @@
         <DetailItem SchemaName="resource"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren/>
     </FormTab>
-    <FormTab xsi:type="IFrameTab" flexiHeight="0" flexiHeader="0">
+    <FormTab xsi:type="IFrameTab" flexiHeight="0" flexiHeader="0" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>BRB</Name>
       <Url>file://BookableResourceBooking/BRB.html</Url>
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
     </FormTab>
-    <FormTab xsi:type="MapTab">
+    <FormTab xsi:type="MapTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>msdyn_latitude;msdyn_longitude</CoordinatesBinding>
     </FormTab>
