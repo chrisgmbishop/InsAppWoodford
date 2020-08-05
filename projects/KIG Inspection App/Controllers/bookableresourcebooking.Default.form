@@ -95,6 +95,7 @@
       &lt;func&gt;Assign&lt;/func&gt;
     &lt;/function&gt;
   &lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:bookingstatus&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
   <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
   &lt;branch info="Set name to work order number" e="true"&gt;
     &lt;if e="true"&gt;
@@ -167,7 +168,9 @@
           &lt;/if&gt;
       &lt;/branch&gt;
   &lt;/Workflow&gt;</WorkflowCommandCanExecute>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <PrimaryCommands>custom_FollowUp|Cmd.RunFollowUp||custom_RemoteAssist|Cmd.RemoteAssist|</PrimaryCommands>
+  <SharedVariableNames/>
   <ClassBinding>
     <SerializedClassBinding name="#WorkOrder" label="WorkOrder" type="String"/>
   </ClassBinding>

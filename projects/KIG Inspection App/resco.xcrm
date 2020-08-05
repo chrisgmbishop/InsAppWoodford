@@ -308,6 +308,8 @@
         <property schema="btc_physicaluid"/>
         <property schema="btc_ppemanufacturedate"/>
         <property schema="btc_ppemanufacturer"/>
+        <property schema="btc_ppeproductcode"/>
+        <property schema="btc_ppeproductdescription"/>
         <property schema="btc_ppetype"/>
         <property schema="btc_roofangle"/>
         <property schema="btc_specifybrand"/>
@@ -320,14 +322,9 @@
         <property schema="msdyn_customerassetcategory"/>
       </properties>
       <indexes>
-        <index schema="idx_msdyn_customerasset_ownerid" issystem="true">
+        <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
           <fields>
-            <field schema="ownerid"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
-          <fields>
-            <field schema="msdyn_masterasset"/>
+            <field schema="msdyn_product"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
@@ -335,14 +332,19 @@
             <field schema="msdyn_account"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
+          <fields>
+            <field schema="msdyn_masterasset"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_customerasset_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_msdyn_parentasset" issystem="true">
           <fields>
             <field schema="msdyn_parentasset"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
-          <fields>
-            <field schema="msdyn_product"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
@@ -966,6 +968,37 @@
           </fields>
         </index>
       </indexes>
+    </entity>
+    <entity schema="resco_mobileaudit">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="createdonbehalfby"/>
+        <property schema="importsequencenumber"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon"/>
+        <property schema="modifiedonbehalfby"/>
+        <property schema="overriddencreatedon"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="owningteam"/>
+        <property schema="owninguser"/>
+        <property schema="resco_description"/>
+        <property schema="resco_deviceid"/>
+        <property schema="resco_entityid"/>
+        <property schema="resco_entityname"/>
+        <property schema="resco_externaluserid"/>
+        <property schema="resco_latitude"/>
+        <property schema="resco_loggedon"/>
+        <property schema="resco_longitude"/>
+        <property schema="resco_mobileauditid"/>
+        <property schema="resco_operation"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="timezoneruleversionnumber"/>
+        <property schema="utcconversiontimezonecode"/>
+        <property schema="versionnumber"/>
+      </properties>
     </entity>
     <entity schema="resco_question">
       <properties>
