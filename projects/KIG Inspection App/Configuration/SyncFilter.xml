@@ -4,6 +4,7 @@
       <filter type="and">
         <condition attribute="statecode" operator="eq" value="0"/>
       </filter>
+      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_serviceaccount" to="accountid" link-type="inner"/>
     </entity>
   </fetch>
   <fetch version="1.0">
@@ -401,7 +402,7 @@
             <condition attribute="starttime" operator="today"/>
             <condition attribute="endtime" operator="next-x-days" value="30"/>
             <condition attribute="endtime" operator="today"/>
-            <condition attribute="starttime" operator="last-week"/>
+            <condition attribute="starttime" operator="last-x-days" value="14"/>
           </filter>
         </filter>
         <link-entity name="bookingstatus" alias="L1" from="bookingstatusid" to="bookingstatus" link-type="inner">
@@ -417,8 +418,10 @@
         </link-entity>
         <link-entity name="bookableresource" alias="L2" from="bookableresourceid" to="resource" link-type="inner">
           <filter type="and">
-            <condition attribute="userid" operator="eq-userid"/>
-            <condition attribute="statecode" operator="eq" value="0"/>
+            <filter type="and">
+              <condition attribute="userid" operator="eq-userid"/>
+              <condition attribute="statecode" operator="eq" value="0"/>
+            </filter>
           </filter>
         </link-entity>
       </link-entity>
@@ -427,48 +430,15 @@
   <fetch version="1.0">
     <entity name="bookableresourcebooking">
       <filter type="and">
-        <condition attribute="statecode" operator="eq" value="0"/>
-        <filter type="or">
-          <filter type="and">
-            <condition attribute="endtime" operator="today"/>
-            <condition attribute="msdyn_fieldservicestatus" entityname="L1" operator="eq" value="690970004"/>
-          </filter>
-          <filter type="and">
-            <condition attribute="msdyn_fieldservicestatus" entityname="L1" operator="in">
-              <value>690970004</value>
-              <value>690970003</value>
-              <value>690970002</value>
-              <value>690970000</value>
-              <value>690970001</value>
-            </condition>
-            <filter type="or">
-              <condition attribute="starttime" operator="next-x-days" value="30"/>
-              <condition attribute="starttime" operator="today"/>
-              <condition attribute="endtime" operator="next-x-days" value="30"/>
-              <condition attribute="endtime" operator="today"/>
-              <condition attribute="starttime" operator="last-x-days" value="5"/>
-            </filter>
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <filter type="or">
+            <condition attribute="starttime" operator="next-x-days" value="30"/>
+            <condition attribute="endtime" operator="last-x-days" value="14"/>
           </filter>
         </filter>
       </filter>
-      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_workorderid" to="msdyn_workorder" link-type="outer">
-        <filter type="and">
-          <condition attribute="statecode" operator="eq" value="0"/>
-          <condition attribute="msdyn_systemstatus" operator="in">
-            <value>690970003</value>
-            <value>690970002</value>
-            <value>690970001</value>
-            <value>690970000</value>
-          </condition>
-        </filter>
-      </link-entity>
-      <link-entity name="bookingstatus" alias="L1" from="bookingstatusid" to="bookingstatus" link-type="inner">
-        <filter type="and">
-          <condition attribute="msdyn_fieldservicestatus" operator="ne" value="690970005"/>
-          <condition attribute="statecode" operator="eq" value="0"/>
-        </filter>
-      </link-entity>
-      <link-entity name="bookableresource" alias="L2" from="bookableresourceid" to="resource" link-type="inner">
+      <link-entity name="bookableresource" alias="L0" from="bookableresourceid" to="resource" link-type="inner">
         <filter type="and">
           <condition attribute="userid" operator="eq-userid"/>
           <condition attribute="statecode" operator="eq" value="0"/>
