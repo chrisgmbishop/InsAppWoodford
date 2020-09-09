@@ -14,16 +14,12 @@
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="telephone1"/>
-        <DetailItem SchemaName="fax"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="websiteurl"/>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="transactioncurrencyid"/>
-        <DetailItem SchemaName="defaultpricelevelid"/>
+        <DetailItem SchemaName="btc_parkingarrangements"/>
+        <DetailItem SchemaName="btc_accesstosystems" Style="MultiLine"/>
+        <DetailItem SchemaName="btc_additionalaccesscomments"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">

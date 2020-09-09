@@ -285,16 +285,14 @@
         </DetailItem>
         <DetailItem SchemaName="msdyn_name"/>
         <DetailItem SchemaName="msdyn_serviceaccount"/>
+        <DetailItem SchemaName="msdyn_reportedbycontact"/>
         <DetailItem SchemaName="btc_solotechnician"/>
         <DetailItem SchemaName="msdyn_systemstatus"/>
+        <DetailItem SchemaName="msdyn_workordersummary"/>
         <DetailItem SchemaName="msdyn_instructions"/>
-        <DetailItem SchemaName="btc_parkingarrangements"/>
-        <DetailItem SchemaName="btc_technicianaccess" Style="MultiLine"/>
-        <DetailItem SchemaName="btc_accesscomments"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="msdyn_workordersummary"/>
         <DetailItem SchemaName="Can you confirm you are in receipt of RAMS and have read and understood?" separator="true" xsi:type="SeparatorDetailItem" Style="SpacerQ">
           <IsConstant>true</IsConstant>
           <AutoGridLayout>1</AutoGridLayout>
@@ -346,16 +344,6 @@
       <Url>file://WorkOrder/WorkOrder.html</Url>
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
-    </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Job Contacts</Name>
-      <SerializedChildren>
-        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
-          <IsConstant>true</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="msdyn_reportedbycontact"/>
-        <DetailItem SchemaName="msdyn_supportcontact"/>
-      </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
       <Name>Map</Name>

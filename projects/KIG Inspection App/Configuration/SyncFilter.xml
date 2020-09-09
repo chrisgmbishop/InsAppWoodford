@@ -4,7 +4,8 @@
       <filter type="and">
         <condition attribute="statecode" operator="eq" value="0"/>
       </filter>
-      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_serviceaccount" to="accountid" link-type="inner"/>
+      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_serviceaccount" to="accountid" link-type="outer"/>
+      <link-entity name="msdyn_workorder" alias="L1" from="msdyn_billingaccount" to="accountid" link-type="outer"/>
     </entity>
   </fetch>
   <fetch version="1.0">
@@ -435,6 +436,7 @@
           <filter type="or">
             <condition attribute="starttime" operator="next-x-days" value="30"/>
             <condition attribute="endtime" operator="last-x-days" value="14"/>
+            <condition attribute="starttime" operator="today"/>
           </filter>
         </filter>
       </filter>

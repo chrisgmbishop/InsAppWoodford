@@ -1,9 +1,9 @@
-﻿bookableresourcebooking=Booking
+﻿account.name=Site Name
+bookableresourcebooking=Booking
 bookableresourcebooking+s=Bookings
 bookableresourcebooking.bookableresourcebookingid=Booking
 connection=Associate Device
 connection.record2id=Device
-msdyn_customerasset.btc_clisthereplatformladderaccess=Where a platform opening is necessary to permit access to (and exit from) a ladder below, is the opening protected by a trapdoor or access hatch?
 resco_sharepointdoc.resco_filesize=File Size
 msdyn_3dmodel.DetailView.3D_Viewer=3D Viewer
 msdyn_workorder.View.WorkOrderList=Work Orders
