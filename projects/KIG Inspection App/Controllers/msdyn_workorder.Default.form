@@ -311,8 +311,9 @@
             </DetailItem>
           </Items>
         </DetailItem>
-        <DetailItem SchemaName="Have you completed the POWERApp?" separator="true" xsi:type="SeparatorDetailItem" Style="MultiLine">
+        <DetailItem SchemaName="Have you completed the POWERApp?" separator="true" xsi:type="SeparatorDetailItem" Style="SpacerQ">
           <IsConstant>true</IsConstant>
+          <AutoGridLayout>1</AutoGridLayout>
         </DetailItem>
         <DetailItem SchemaName="$Table2" grid="true">
           <Columns>*;*</Columns>
@@ -330,7 +331,7 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
       <Name>Customer Assets List (*)</Name>
       <Binding SchemaName="msdyn_customerasset.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;msdyn_customerasset.FilterView&lt;/views&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
@@ -375,10 +376,10 @@
       <Name>Client Signature</Name>
       <Flags>0</Flags>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" FlipMode="224" ListCommands="9">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" FlipMode="224" ListCommands="9" AllowAddExisting="true">
       <Name>Cloud Documents List</Name>
       <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
-      <Views>&lt;extra&gt;&lt;filter entity="resco_sharepointdoc"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_sharepointdoc"&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="resco_regardingid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{msdyn_serviceaccount}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>resco_sharepointdoc.*:resco_sharepointdoc.@Default</LookupViews>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

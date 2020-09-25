@@ -9,6 +9,7 @@
   <Kind>AssociatedList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!modifiedon</OrderBy>
+  <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>resco_completionstatus</string>

@@ -1,9 +1,9 @@
-﻿account.name=Site Name
-bookableresourcebooking=Booking
+﻿bookableresourcebooking=Booking
 bookableresourcebooking+s=Bookings
 bookableresourcebooking.bookableresourcebookingid=Booking
 connection=Associate Device
 connection.record2id=Device
+msdyn_customerasset.statuscode=Status
 resco_sharepointdoc.resco_filesize=File Size
 msdyn_3dmodel.DetailView.3D_Viewer=3D Viewer
 msdyn_workorder.View.WorkOrderList=Work Orders

@@ -19,6 +19,9 @@
           <AutoGridLayout>1</AutoGridLayout>
         </DetailItem>
         <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="statuscode"/>
+        <DetailItem SchemaName="btc_physicaluid"/>
+        <DetailItem SchemaName="btc_existingasset"/>
         <DetailItem SchemaName="btc_detailedlocation"/>
         <DetailItem SchemaName="msdyn_account"/>
         <DetailItem SchemaName="msdyn_customerassetcategory"/>
@@ -54,7 +57,6 @@
         <DetailItem SchemaName="btc_clfixingmethodtype"/>
         <DetailItem SchemaName="btc_specifymethodoffixing"/>
         <DetailItem SchemaName="btc_clladdertype"/>
-        <DetailItem SchemaName="btc_clnumberofladders"/>
         <DetailItem SchemaName="btc_clladderflightssections"/>
         <DetailItem SchemaName="btc_clareplatformspresent"/>
         <DetailItem SchemaName="btc_clsafetycagehooptype"/>
@@ -89,7 +91,6 @@
       <SerializedChildren>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
         <DetailItem SchemaName="btc_systembrand"/>
-        <DetailItem SchemaName="btc_physicaluid"/>
         <DetailItem SchemaName="btc_specifybrand"/>
         <DetailItem SchemaName="btc_useofsystem"/>
         <DetailItem SchemaName="btc_methodoffixing"/>
@@ -109,7 +110,6 @@
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardsselectionfsgr"/>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
-        <DetailItem SchemaName="btc_physicaluid"/>
         <DetailItem SchemaName="btc_whattypeofmembranesurfaceinstalledon"/>
         <DetailItem SchemaName="btc_othermembranesurface"/>
         <DetailItem SchemaName="btc_roofangle"/>
