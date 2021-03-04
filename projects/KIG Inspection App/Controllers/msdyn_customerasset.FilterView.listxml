@@ -16,7 +16,7 @@
   <Fetch version="1.0">
     <entity name="msdyn_customerasset">
       <filter type="and">
-        <condition attribute="btc_lastinspected" operator="olderthan-x-weeks" value="3"/>
+        <condition attribute="btc_lastinspected" operator="olderthan-x-weeks" value="4"/>
       </filter>
       <link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
         <link-entity name="msdyn_workorder" alias="L1" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>

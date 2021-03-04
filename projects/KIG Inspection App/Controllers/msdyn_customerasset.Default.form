@@ -11,7 +11,7 @@
   <ClassBinding/>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexiWidth="1" flexiHeader="0" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiWidth="1" flexiHeader="0" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="Asset Image" image="true" imageActions="0" Style="FormNoteImage">
@@ -29,7 +29,7 @@
         <DetailItem SchemaName="btc_installdate"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>EB Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardsselectioneyebolts"/>
@@ -47,7 +47,7 @@
         <DetailItem SchemaName="btc_ebaretheredemountablecomponents"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>CL Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardsselectioncatladders"/>
@@ -68,7 +68,7 @@
         <DetailItem SchemaName="btc_clotherrungtype"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>DWA Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_detailedlocation"/>
@@ -86,7 +86,7 @@
         <DetailItem SchemaName="btc_dwaanchordeviceieeyeboltdemountable"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" FlexiExpandVisibility="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" FlexiExpandVisibility="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>HLL Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
@@ -105,7 +105,7 @@
         <DetailItem SchemaName="btc_cableterminationtype"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeight="4" FlexiExpandVisibility="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiHeight="4" FlexiExpandVisibility="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>FSGR Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardsselectionfsgr"/>
@@ -127,7 +127,7 @@
         <DetailItem SchemaName="btc_aresacrificialpadsrequired"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" flexiHeight="4" FlexiExpandVisibility="2" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" flexiHeight="4" FlexiExpandVisibility="2" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>PPE Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_ppetype"/>
@@ -137,14 +137,14 @@
         <DetailItem SchemaName="btc_ppeproductdescription"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>DMARC Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_dmarcsystembrand"/>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>WS Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_wsstandards"/>
@@ -153,7 +153,7 @@
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RA Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_rastandard"/>
@@ -166,7 +166,7 @@
         <DetailItem SchemaName="btc_ebdirectionofloading"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>LT Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_numberofeyebolts"/>
@@ -175,7 +175,7 @@
         <DetailItem SchemaName="btc_ebdirectionofloading"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>OT Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardsselectioneyebolts"/>
@@ -186,7 +186,7 @@
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>VLL Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_vllstandards"/>
@@ -197,7 +197,7 @@
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>VTS Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_vllstandards"/>
@@ -208,13 +208,13 @@
         <DetailItem SchemaName="btc_otsecondaryfixinghasbeenusedans"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>MVF Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_mvfstandards"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RAP Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_rapstandard"/>
@@ -225,7 +225,7 @@
         <DetailItem SchemaName="btc_rapdirectionofloading"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RLC Information</Name>
       <SerializedChildren>
         <DetailItem SchemaName="btc_rlcstandards"/>
@@ -234,43 +234,43 @@
         <DetailItem SchemaName="btc_rlclength"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="4">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="4">
       <Name>Inspection Templates</Name>
       <CustomName>Inspection Templates</CustomName>
       <Binding SchemaName="resco_questionnaire.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.@Associated Questionnaires&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="resco_istemplate" operator="eq" value="1"/&amp;gt;&amp;lt;condition attribute="msdyn_customerassetcategoryid" entityname="L0" operator="eq" value="{{msdyn_customerassetcategory}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="btc_msdyn_customerassetcategory_resco_quest" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"&amp;gt;&amp;lt;link-entity name="msdyn_customerassetcategory" alias="L1" from="msdyn_customerassetcategoryid" to="msdyn_customerassetcategoryid" link-type="inner"/&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
       <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Reuse:resco_questionnaire.Staged Templates:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
     </FormTab>
-    <FormTab xsi:type="IFrameTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="IFrameTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Customer Asset</Name>
       <Url>file://CustomerAsset/CustomerAsset.html</Url>
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Inspections</Name>
       <CustomName>Inspections</CustomName>
       <Binding SchemaName="resco_questionnaire.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Answered Questionnaires:resco_questionnaire.@In progress or completed:resco_questionnaire.Reuse:resco_questionnaire.Staged Templates:resco_questionnaire.Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name="resco_questionnaire"&amp;gt;	&amp;lt;filter type="and"&amp;gt;		&amp;lt;condition attribute='resco_istemplate' operator='eq' value='0' /&amp;gt;		&amp;lt;filter type="or"&amp;gt;			&amp;lt;condition attribute="resco_regardingid" operator="eq" value="{{msdyn_customerassetid}}"/&amp;gt;			&amp;lt;condition attribute="resco_rawidvalue" entityname="QuestionLinkAlias" operator="eq" value="{{msdyn_customerassetid}}"/&amp;gt;		&amp;lt;/filter&amp;gt;	&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="resco_question" alias="QuestionLinkAlias" from="resco_questionnaireid" to="resco_questionnaireid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
       <LookupViews>&lt;extra&gt;&lt;views&gt;resco_questionnaire.Questionnaire Templates Lookup:resco_questionnaire.Reuse:resco_questionnaire.Staged Templates&lt;/views&gt;&lt;filter entity="resco_questionnaire"&gt;&amp;lt;fetch&amp;gt;&amp;lt;entity name='resco_questionnaire'&amp;gt;&amp;lt;filter&amp;gt;&amp;lt;condition attribute='resco_istemplate' operator='eq' value='1' /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\resco_sharepointdoc@2x.png" IsIconNameReadOnly="0">
+      <Name>Cloud Documents List</Name>
+      <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
       <Name>Sub Assets</Name>
       <CustomName>Sub Assets</CustomName>
       <Binding SchemaName="msdyn_customerasset.msdyn_masterasset"/>
       <Views>msdyn_customerasset.Default</Views>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Work Orders List</Name>
       <Binding SchemaName="msdyn_workorder.msdyn_customerasset"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Notes List</Name>
-      <Binding SchemaName="annotation.objectid"/>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Cloud Documents List</Name>
-      <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

@@ -3,6 +3,7 @@
   <EntityName>msdyn_workorder</EntityName>
   <CamelCase>msdyn_workorder</CamelCase>
   <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.now&lt;/var&gt;&lt;func&gt;SetToday&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_name.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Incidents.IsExpanded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="setup field for new record" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="setup msdyn_name" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_name&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_name.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Hide CAs if PA is not complete" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Set styles for RAMS button onLoad" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Set styles for PA button onLoad" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Show extra works button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_extraworkspreapproved&lt;/var&gt;&lt;op&gt;NotEqual&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Extra works.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Extra works.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="If Tech is self-signing" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_solotechnician&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.btc_signedby.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_solotechnician&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.btc_signedby.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
   <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
     &lt;definition e="false"&gt;
       &lt;var&gt;alertDifferentCurrencyBillingAccount&lt;/var&gt;
@@ -276,7 +277,7 @@
   </ClassBinding>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <AutoGridColumns>2</AutoGridColumns>
       <SerializedChildren>
@@ -286,7 +287,6 @@
         <DetailItem SchemaName="msdyn_name"/>
         <DetailItem SchemaName="msdyn_serviceaccount"/>
         <DetailItem SchemaName="msdyn_reportedbycontact"/>
-        <DetailItem SchemaName="btc_solotechnician"/>
         <DetailItem SchemaName="msdyn_systemstatus"/>
         <DetailItem SchemaName="msdyn_workordersummary"/>
         <DetailItem SchemaName="msdyn_instructions"/>
@@ -331,26 +331,26 @@
         </DetailItem>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224">
       <Name>Customer Assets List (*)</Name>
       <Binding SchemaName="msdyn_customerasset.@virtual"/>
       <Views>&lt;extra&gt;&lt;views&gt;msdyn_customerasset.FilterView&lt;/views&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
     </FormTab>
-    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>POWERApp double tap to expand</Name>
       <Url>https://keesafety.app/power/</Url>
     </FormTab>
-    <FormTab xsi:type="IFrameTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="IFrameTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>WorkOrder</Name>
       <Url>file://WorkOrder/WorkOrder.html</Url>
       <IsVisible>false</IsVisible>
       <DelayLoad>false</DelayLoad>
     </FormTab>
-    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
       <Name>Map</Name>
       <CoordinatesBinding>msdyn_latitude;msdyn_longitude</CoordinatesBinding>
     </FormTab>
-    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
       <Name>Address</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_address1"/>
@@ -362,24 +362,31 @@
         <DetailItem SchemaName="msdyn_country"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
       <Name>Notes List</Name>
       <Binding SchemaName="annotation.objectid"/>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Client Name or Self Sign</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="btc_solotechnician"/>
+        <DetailItem SchemaName="btc_signedby"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexiHeight="1" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Client Signature</Name>
+      <Flags>0</Flags>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\resco_sharepointdoc@2x.png" IsIconNameReadOnly="0" FlipMode="224" ListCommands="9" AllowAddExisting="true">
+      <Name>Cloud Documents List</Name>
+      <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
+      <LookupViews>resco_sharepointdoc.*:resco_sharepointdoc.@Default</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>Incidents</Name>
       <CustomName>Incidents</CustomName>
       <Binding SchemaName="msdyn_workorderincident.msdyn_workorder"/>
       <Views>msdyn_workorderincident.DetailedIncidentList</Views>
-    </FormTab>
-    <FormTab xsi:type="SignatureTab" flexiHeight="1" NameModified="0" EntityIconName="" IsIconNameReadOnly="0">
-      <Name>Client Signature</Name>
-      <Flags>0</Flags>
-    </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" EntityIconName="" IsIconNameReadOnly="0" FlipMode="224" ListCommands="9" AllowAddExisting="true">
-      <Name>Cloud Documents List</Name>
-      <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
-      <LookupViews>resco_sharepointdoc.*:resco_sharepointdoc.@Default</LookupViews>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>
