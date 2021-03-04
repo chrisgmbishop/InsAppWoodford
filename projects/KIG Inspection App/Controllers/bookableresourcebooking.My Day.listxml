@@ -32,8 +32,11 @@
     <entity name="bookableresourcebooking">
       <filter type="and">
         <filter type="and">
-          <condition attribute="starttime" operator="today"/>
           <condition attribute="statecode" operator="eq" value="0"/>
+          <filter type="or">
+            <condition attribute="starttime" operator="today"/>
+            <condition attribute="bookingstatus" operator="eq" value="048e769c-7e89-ea11-a811-00224801ce17" uitype="bookingstatus" uiname="MultiDay Overnight"/>
+          </filter>
         </filter>
       </filter>
     </entity>

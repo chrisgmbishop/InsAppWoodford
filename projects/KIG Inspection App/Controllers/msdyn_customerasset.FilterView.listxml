@@ -7,9 +7,11 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_name</OrderBy>
+  <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
   <SerializedBindings>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
+    <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
@@ -23,6 +25,10 @@
       </link-entity>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+    <attribute schema="msdyn_functionallocation" method="Contains" reference="true"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -39,7 +45,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_customerassetcategory">
           <StyleName>gray</StyleName>
-          <Bounds>10,30,246,14</Bounds>
+          <Bounds>10,30,120,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_functionallocation">
+          <StyleName>gray</StyleName>
+          <Bounds>130,30,126,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

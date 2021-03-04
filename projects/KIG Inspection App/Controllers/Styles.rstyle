@@ -826,5 +826,25 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="CPTag" Style="0113 tags" Type="TextCell">
+      <Properties>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-65597</Value>
+        </Property>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-65597</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="CFTag" Style="0113 tags" Type="TextCell">
+      <Properties>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>-2511901</Value>
+        </Property>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2511901</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>
