@@ -33,7 +33,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_name">
           <StyleName>primary</StyleName>
-          <Bounds>17,14,303,27</Bounds>
+          <Bounds>17,14,295,27</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

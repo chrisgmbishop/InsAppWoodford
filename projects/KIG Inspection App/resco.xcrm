@@ -486,6 +486,7 @@
         <property schema="btc_aresacrificialpadsrequired"/>
         <property schema="btc_aretheregatesfittedtothesystem"/>
         <property schema="btc_aretoeboardspresentonsystem"/>
+        <property schema="btc_assetsource"/>
         <property schema="btc_brandproductname"/>
         <property schema="btc_cablematerial"/>
         <property schema="btc_cablespecification"/>
@@ -505,6 +506,12 @@
         <property schema="btc_clotherrungtype"/>
         <property schema="btc_clrungtype"/>
         <property schema="btc_clsafetycagehooptype"/>
+        <property schema="btc_davanchorpointposition"/>
+        <property schema="btc_davaretherehiddenelements"/>
+        <property schema="btc_davlengthh"/>
+        <property schema="btc_davlengthl"/>
+        <property schema="btc_davmaterialspecification"/>
+        <property schema="btc_davremovabledavitarm"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
         <property schema="btc_dwaanchordeviceieeyeboltdemountable"/>
@@ -517,9 +524,17 @@
         <property schema="btc_ebdirectionofloading"/>
         <property schema="btc_existingasset"/>
         <property schema="btc_eyeboltbasematerial"/>
+        <property schema="btc_fixedgrendbaycentres"/>
+        <property schema="btc_fixedgrfixturetype"/>
+        <property schema="btc_fixedgrmidbaycentres"/>
+        <property schema="btc_fixedgrrooftype"/>
+        <property schema="btc_fixedgrsupportrailpresent"/>
+        <property schema="btc_fixedgrthirdrailpresent"/>
+        <property schema="btc_fixedgrtotalheight"/>
         <property schema="btc_fixingsclampsoncatladdersgatessteelwork"/>
         <property schema="btc_fixturemethodtype"/>
         <property schema="btc_fixturetype"/>
+        <property schema="btc_frequencyofinspection"/>
         <property schema="btc_fsgrsystembrand"/>
         <property schema="btc_hllarebearerbarspresentwithbaseplates"/>
         <property schema="btc_hllareentryterminalsendstopspresent"/>
@@ -529,6 +544,15 @@
         <property schema="btc_isanupstandparapetpresent"/>
         <property schema="btc_lastinspected"/>
         <property schema="btc_lengthofsystemm"/>
+        <property schema="btc_lpconductorcovering"/>
+        <property schema="btc_lpconductorfixturetype"/>
+        <property schema="btc_lpconductormaterial"/>
+        <property schema="btc_lpconductorsize"/>
+        <property schema="btc_lpedgefallprotectionpresent"/>
+        <property schema="btc_lpequipotentialbondpresent"/>
+        <property schema="btc_lpgroundingtype"/>
+        <property schema="btc_lprooffinish"/>
+        <property schema="btc_lpsurgeprotectiontype"/>
         <property schema="btc_maxofusers"/>
         <property schema="btc_maxspan"/>
         <property schema="btc_maxuserweight"/>
@@ -547,6 +571,12 @@
         <property schema="btc_otinstallationbeentestedcalcedanswer"/>
         <property schema="btc_otsecondaryfixinghasbeenusedans"/>
         <property schema="btc_physicaluid" fieldpermissions="Read Update"/>
+        <property schema="btc_portladclassification"/>
+        <property schema="btc_portladfixedstabilitydevices"/>
+        <property schema="btc_portladladdertype"/>
+        <property schema="btc_portladmaterialspecification"/>
+        <property schema="btc_portladproductcodename"/>
+        <property schema="btc_portladthirdpartystabilitydevices"/>
         <property schema="btc_ppemanufacturedate"/>
         <property schema="btc_ppemanufacturer"/>
         <property schema="btc_ppeproductcode"/>
@@ -567,9 +597,28 @@
         <property schema="btc_rlcstandards"/>
         <property schema="btc_rlcwidth"/>
         <property schema="btc_roofangle"/>
+        <property schema="btc_safetygatesapplication"/>
+        <property schema="btc_safetygatesfixturetype"/>
+        <property schema="btc_safetygatesgateheight"/>
+        <property schema="btc_safetygatesgatetype"/>
+        <property schema="btc_safetygatesgatewidth"/>
+        <property schema="btc_safetygatesmaterialspecification"/>
+        <property schema="btc_safetygatesspringloaded"/>
+        <property schema="btc_soapbasematerialrooftype"/>
+        <property schema="btc_soapfixturetype"/>
+        <property schema="btc_soapmaterialspecguardrail"/>
+        <property schema="btc_soapmaterialspecstepsplatform"/>
         <property schema="btc_specifybrand"/>
         <property schema="btc_specifymethodoffixing"/>
+        <property schema="btc_standardelectiontravellerandshuttle"/>
+        <property schema="btc_standardselectiondavits"/>
         <property schema="btc_standardselectiondwa"/>
+        <property schema="btc_standardselectionfixedgr"/>
+        <property schema="btc_standardselectionlightning"/>
+        <property schema="btc_standardselectionportlad"/>
+        <property schema="btc_standardselectionsafetygates"/>
+        <property schema="btc_standardselectionshiplaadders"/>
+        <property schema="btc_standardselectionsoap"/>
         <property schema="btc_standardsselectioncatladders"/>
         <property schema="btc_standardsselectioneyebolts"/>
         <property schema="btc_standardsselectionfsgr"/>
@@ -577,6 +626,8 @@
         <property schema="btc_structuralconfiguration"/>
         <property schema="btc_systembrand"/>
         <property schema="btc_totallengthofsystemm"/>
+        <property schema="btc_travellercategoryofuse"/>
+        <property schema="btc_travellerperishableelementsenergyabsorber"/>
         <property schema="btc_useofsystem"/>
         <property schema="btc_vllstandards"/>
         <property schema="btc_whattypeofmembranesurfaceinstalledon"/>
@@ -584,21 +635,27 @@
         <property schema="btc_wsfixturetype"/>
         <property schema="btc_wsstandards"/>
         <property schema="msdyn_customerassetcategory"/>
+        <property schema="msdyn_functionallocation"/>
       </properties>
       <indexes>
-        <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
-          <fields>
-            <field schema="msdyn_customerassetcategory"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
           <fields>
             <field schema="msdyn_product"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_customerasset_ownerid" issystem="true">
+        <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
           <fields>
-            <field schema="ownerid"/>
+            <field schema="msdyn_account"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_customerasset_msdyn_functionallocation" issystem="true">
+          <fields>
+            <field schema="msdyn_functionallocation"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
+          <fields>
+            <field schema="msdyn_customerassetcategory"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_parentasset" issystem="true">
@@ -606,14 +663,14 @@
             <field schema="msdyn_parentasset"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_customerasset_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
           <fields>
             <field schema="msdyn_masterasset"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
-          <fields>
-            <field schema="msdyn_account"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_name" issystem="true">
@@ -681,6 +738,28 @@
           </fields>
         </index>
         <index schema="idx_msdyn_fieldservicesetting_msdyn_name" issystem="true">
+          <fields>
+            <field schema="msdyn_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+
+    <entity schema="msdyn_functionallocation" xattr="35651584">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="msdyn_functionallocationid"/>
+        <property schema="msdyn_name"/>
+        <property schema="ownerid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_msdyn_functionallocation_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_functionallocation_msdyn_name" issystem="true">
           <fields>
             <field schema="msdyn_name"/>
           </fields>
@@ -972,11 +1051,6 @@
             <field schema="transactioncurrencyid"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_workorder_msdyn_parentworkorder" issystem="true">
-          <fields>
-            <field schema="msdyn_parentworkorder"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_workorder_msdyn_priority" issystem="true">
           <fields>
             <field schema="msdyn_priority"/>
@@ -1002,6 +1076,11 @@
             <field schema="msdyn_closedby"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_workorder_msdyn_serviceaccount" issystem="true">
+          <fields>
+            <field schema="msdyn_serviceaccount"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_workorder_msdyn_supportcontact" issystem="true">
           <fields>
             <field schema="msdyn_supportcontact"/>
@@ -1012,9 +1091,9 @@
             <field schema="msdyn_pricelist"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_workorder_msdyn_serviceaccount" issystem="true">
+        <index schema="idx_msdyn_workorder_msdyn_parentworkorder" issystem="true">
           <fields>
-            <field schema="msdyn_serviceaccount"/>
+            <field schema="msdyn_parentworkorder"/>
           </fields>
         </index>
         <index schema="idx_msdyn_workorder_createdby" issystem="true">
@@ -1763,6 +1842,7 @@
         <property schema="resco_rawdatevalue"/>
         <property schema="resco_rawidvalue"/>
         <property schema="resco_rawnumericvalue"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_required"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
@@ -1819,6 +1899,7 @@
         <property schema="resco_questionnaireid"/>
         <property schema="resco_repeatconfig"/>
         <property schema="resco_repeatindex"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_rules"/>
         <property schema="resco_templategroupid"/>
         <property schema="resco_visible"/>
@@ -1861,6 +1942,7 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="resco_archivedon"/>
+        <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
@@ -1878,6 +1960,7 @@
         <property schema="resco_regardingid"/>
         <property schema="resco_regardingidlabel"/>
         <property schema="resco_regardingidname"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_result"/>
         <property schema="resco_reusefetch"/>
         <property schema="resco_reusefromprevious"/>

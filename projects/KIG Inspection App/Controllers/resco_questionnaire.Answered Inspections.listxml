@@ -13,7 +13,6 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!createdon</OrderBy>
-  <MultiSelectCommands>RunMobileReport|Eyebolt Report|8d881475-ab1e-eb11-a813-00224801b559|RunMobileReport|HLL Report|87e20eca-af1e-eb11-a813-00224801b559|RunMobileReport|Freestanding GR Report|2d701b9a-af1e-eb11-a813-00224801b559|RunMobileReport|PPE|473b86c6-adf9-ea11-a815-00224801ce17|RunMobileReport|Gravity Anchor Report|0daed0bc-b11e-eb11-a813-00224801b559|RunMobileReport|Open Customer Report|4b9820f6-83fb-ea11-a813-00224801ce17</MultiSelectCommands>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>resco_completionstatus</string>
@@ -37,7 +36,7 @@
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition attribute="createdon" operator="on-or-after" value="2019-11-14"/>
+        <condition attribute="createdon" operator="on-or-after" value="2020-10-25"/>
       </filter>
     </entity>
   </Fetch>

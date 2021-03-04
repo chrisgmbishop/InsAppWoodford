@@ -432,12 +432,14 @@
     <entity name="bookableresourcebooking">
       <filter type="and">
         <filter type="and">
-          <condition attribute="statecode" operator="eq" value="0"/>
           <filter type="or">
             <condition attribute="starttime" operator="next-x-days" value="30"/>
             <condition attribute="endtime" operator="last-x-days" value="14"/>
             <condition attribute="starttime" operator="today"/>
             <condition attribute="starttime" operator="last-x-days" value="5"/>
+          </filter>
+          <filter type="or">
+            <condition attribute="statecode" operator="eq" value="0"/>
             <condition attribute="bookingstatus" operator="eq" value="048e769c-7e89-ea11-a811-00224801ce17" uitype="bookingstatus" uiname="MultiDay Overnight"/>
             <condition attribute="bookingstatus" operator="eq" value="53f39908-d08a-4d9c-90e8-907fd7bec07d" uitype="bookingstatus" uiname="In Progress"/>
           </filter>
