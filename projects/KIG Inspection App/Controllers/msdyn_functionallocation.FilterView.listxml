@@ -1,0 +1,41 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_functionallocation</EntityName>
+    <CamelCase>msdyn_functionallocation</CamelCase>
+  </Attributes>
+  <Name>FilterView</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_functionallocationid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_functionallocation">
+      <link-entity name="msdyn_customerasset" alias="L0" from="msdyn_functionallocation" to="msdyn_functionallocationid" link-type="inner">
+        <link-entity name="msdyn_workorderincident" alias="L1" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
+          <link-entity name="msdyn_workorder" alias="L2" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>
+        </link-entity>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

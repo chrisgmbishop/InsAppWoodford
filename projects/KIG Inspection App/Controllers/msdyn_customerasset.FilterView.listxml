@@ -7,9 +7,12 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_name</OrderBy>
+  <SortAllowedFields>btc_existingasset;createdon;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
+  <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
   <SerializedBindings>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
+    <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
@@ -39,7 +42,13 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_customerassetcategory">
           <StyleName>gray</StyleName>
-          <Bounds>10,30,246,14</Bounds>
+          <Bounds>10,30,120,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_functionallocation">
+          <StyleName>gray</StyleName>
+          <Bounds>129,30,127,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>

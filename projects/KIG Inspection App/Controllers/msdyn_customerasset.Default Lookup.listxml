@@ -10,9 +10,10 @@
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_name</OrderBy>
   <SerializedBindings>
+    <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
+    <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
-    <string>msdyn_product</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <SerializedTemplates>
@@ -29,11 +30,17 @@
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="msdyn_product">
+        <CellTemplate SchemaName="msdyn_functionallocation">
           <StyleName>gray</StyleName>
-          <Bounds>8,26,229,11</Bounds>
+          <Bounds>126,25,111,11</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_customerassetcategory">
+          <StyleName>gray</StyleName>
+          <Bounds>8,25,120,11</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
