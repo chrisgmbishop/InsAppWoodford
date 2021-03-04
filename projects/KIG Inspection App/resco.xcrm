@@ -744,25 +744,16 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_functionallocation" xattr="33554432">
+
+    <entity schema="msdyn_functionallocation" xattr="35651584">
       <properties>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
-        <property schema="msdyn_address1"/>
-        <property schema="msdyn_city"/>
-        <property schema="msdyn_country"/>
         <property schema="msdyn_functionallocationid"/>
         <property schema="msdyn_name"/>
-        <property schema="msdyn_parentfunctionallocation"/>
-        <property schema="msdyn_postalcode"/>
         <property schema="ownerid"/>
       </properties>
       <indexes>
-        <index schema="idx_msdyn_functionallocation_msdyn_parentfunctionallocation" issystem="true">
-          <fields>
-            <field schema="msdyn_parentfunctionallocation"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_functionallocation_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
@@ -1851,6 +1842,7 @@
         <property schema="resco_rawdatevalue"/>
         <property schema="resco_rawidvalue"/>
         <property schema="resco_rawnumericvalue"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_required"/>
         <property schema="resco_reusefromprevious"/>
         <property schema="resco_rules"/>
@@ -1907,6 +1899,7 @@
         <property schema="resco_questionnaireid"/>
         <property schema="resco_repeatconfig"/>
         <property schema="resco_repeatindex"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_rules"/>
         <property schema="resco_templategroupid"/>
         <property schema="resco_visible"/>
@@ -1949,6 +1942,7 @@
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
         <property schema="resco_archivedon"/>
+        <property schema="resco_autoreport"/>
         <property schema="resco_completionstatus"/>
         <property schema="resco_description"/>
         <property schema="resco_duration"/>
@@ -1966,6 +1960,7 @@
         <property schema="resco_regardingid"/>
         <property schema="resco_regardingidlabel"/>
         <property schema="resco_regardingidname"/>
+        <property schema="resco_reportingproperties"/>
         <property schema="resco_result"/>
         <property schema="resco_reusefetch"/>
         <property schema="resco_reusefromprevious"/>

@@ -21,6 +21,9 @@
       </link-entity>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>

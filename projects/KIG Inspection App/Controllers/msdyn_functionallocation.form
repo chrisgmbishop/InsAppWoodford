@@ -5,20 +5,17 @@
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_name"/>
-        <DetailItem SchemaName="msdyn_address1"/>
-        <DetailItem SchemaName="msdyn_postalcode"/>
-        <DetailItem SchemaName="msdyn_parentfunctionallocation"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
       <Name>Customer Assets List</Name>
       <Binding SchemaName="msdyn_customerasset.msdyn_functionallocation"/>
-      <Views>msdyn_customerasset.FilterView</Views>
-      <LookupViews>msdyn_customerasset.FilterView</LookupViews>
+      <Views>msdyn_customerasset.*:msdyn_customerasset.@FilterView</Views>
+      <LookupViews>msdyn_customerasset.Default Lookup:msdyn_customerasset.FilterView</LookupViews>
     </FormTab>
   </SerializedChildrenV2>
 </EntityForm>

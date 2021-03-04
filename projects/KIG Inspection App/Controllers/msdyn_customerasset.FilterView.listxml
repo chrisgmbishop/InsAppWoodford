@@ -26,6 +26,10 @@
       </link-entity>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+    <attribute schema="msdyn_functionallocation" method="Contains" reference="true"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -48,7 +52,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_functionallocation">
           <StyleName>gray</StyleName>
-          <Bounds>129,30,127,14</Bounds>
+          <Bounds>130,30,126,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
