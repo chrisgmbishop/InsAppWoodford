@@ -13,7 +13,6 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>!createdon</OrderBy>
-  <MultiSelectCommands>RunMobileReport|Eyebolt Report|f7df22b5-df16-eb11-a813-00224801ce17|RunMobileReport|HLL Report|e4e8590d-c507-eb11-a813-00224801ce17|RunMobileReport|Guardrail C.1 - H1|6232eced-d2d9-ea11-a813-00224801c242|RunMobileReport|PPE Report|4a3b86c6-adf9-ea11-a815-00224801ce17|RunMobileReport|GA Report|845e8dca-0e19-eb11-a813-00224801c242|RunMobileReport|Open Category Report|9b079d80-c316-eb11-a813-00224801ce17</MultiSelectCommands>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>resco_completionstatus</string>

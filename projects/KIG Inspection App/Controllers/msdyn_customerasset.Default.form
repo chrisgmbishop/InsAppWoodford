@@ -25,6 +25,9 @@
         <DetailItem SchemaName="statuscode"/>
         <DetailItem SchemaName="btc_physicaluid"/>
         <DetailItem SchemaName="btc_existingasset"/>
+        <DetailItem SchemaName="msdyn_functionallocation">
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="msdyn_functionallocation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_functionallocation"&amp;gt;&amp;lt;link-entity name="msdyn_customerasset" alias="L0" from="msdyn_functionallocation" to="msdyn_functionallocationid" link-type="inner"&amp;gt;&amp;lt;link-entity name="account" alias="L1" from="accountid" to="msdyn_account" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{msdyn_account}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
         <DetailItem SchemaName="btc_detailedlocation"/>
         <DetailItem SchemaName="msdyn_account"/>
         <DetailItem SchemaName="msdyn_customerassetcategory"/>
@@ -74,7 +77,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>DWA Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_detailedlocation"/>
         <DetailItem SchemaName="btc_standardselectiondwa"/>
         <DetailItem SchemaName="btc_numberofdeadweightanchors"/>
         <DetailItem SchemaName="btc_useofsystem"/>

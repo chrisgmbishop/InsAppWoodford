@@ -15,7 +15,6 @@
     <string>msdyn_customerassetid</string>
     <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
-    <string>msdyn_product</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <SerializedTemplates>
