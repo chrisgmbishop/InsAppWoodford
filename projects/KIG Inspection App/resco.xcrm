@@ -934,6 +934,7 @@
         <property schema="btc_preapprovalamount"/>
         <property schema="btc_preapprovalamount_base"/>
         <property schema="btc_ramssigned"/>
+        <property schema="btc_signedby"/>
         <property schema="btc_solotechnician"/>
         <property schema="btc_technicianaccess"/>
         <property schema="msdyn_timewindowend"/>
@@ -1750,6 +1751,7 @@
         <property schema="resco_isseparator"/>
         <property schema="resco_kind"/>
         <property schema="resco_label"/>
+        <property schema="resco_localization"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>
@@ -1811,6 +1813,7 @@
         <property schema="resco_expanded"/>
         <property schema="resco_index"/>
         <property schema="resco_label"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_questiongroupid"/>
         <property schema="resco_questionnaireid"/>
@@ -1852,6 +1855,7 @@
     </entity>
     <entity schema="resco_questionnaire">
       <properties>
+        <property schema="btc_resultstatus"/>
         <property schema="createdby"/>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
@@ -1865,6 +1869,7 @@
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
         <property schema="resco_languagecode"/>
+        <property schema="resco_localization"/>
         <property schema="resco_name"/>
         <property schema="resco_options"/>
         <property schema="resco_publishedon"/>
@@ -1881,6 +1886,7 @@
         <property schema="resco_script"/>
         <property schema="resco_serializedanswers"/>
         <property schema="resco_styles"/>
+        <property schema="resco_templatedependent"/>
         <property schema="resco_templateid"/>
         <property schema="resco_version"/>
         <property schema="resco_versionname"/>
@@ -1893,11 +1899,6 @@
             <field schema="resco_folderid"/>
           </fields>
         </index>
-        <index schema="idx_resco_questionnaire_createdby" issystem="true">
-          <fields>
-            <field schema="createdby"/>
-          </fields>
-        </index>
         <index schema="idx_resco_questionnaire_resco_templateid" issystem="true">
           <fields>
             <field schema="resco_templateid"/>
@@ -1906,6 +1907,11 @@
         <index schema="idx_resco_questionnaire_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_questionnaire_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
           </fields>
         </index>
         <index schema="idx_resco_questionnaire_resco_name" issystem="true">
