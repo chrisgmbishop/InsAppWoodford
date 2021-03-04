@@ -437,7 +437,6 @@
             <condition attribute="endtime" operator="last-x-days" value="14"/>
             <condition attribute="starttime" operator="today"/>
             <condition attribute="starttime" operator="last-x-days" value="5"/>
-
           </filter>
           <filter type="or">
             <condition attribute="statecode" operator="eq" value="0"/>
