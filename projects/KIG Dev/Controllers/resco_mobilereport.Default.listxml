@@ -1,0 +1,45 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>resco_mobilereport</EntityName>
+    <CamelCase>resco_mobilereport</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>LookupList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>resco_name</OrderBy>
+  <SerializedBindings>
+    <string>resco_entityname</string>
+    <string>resco_mobilereportid</string>
+    <string>resco_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="resco_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,160,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_mobilereportid">
+          <StyleName>primary</StyleName>
+          <Bounds>170,3,146,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resco_entityname">
+          <StyleName>primary</StyleName>
+          <Bounds>10,28,100,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
