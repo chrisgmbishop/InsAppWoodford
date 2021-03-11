@@ -284,17 +284,6 @@
                 <condition attribute="starttime" operator="last-week"/>
               </filter>
             </filter>
-            <link-entity name="bookingstatus" alias="L9" from="bookingstatusid" to="bookingstatus" link-type="inner">
-              <filter type="and">
-                <condition attribute="msdyn_fieldservicestatus" operator="in">
-                  <value>690970000</value>
-                  <value>690970001</value>
-                  <value>690970002</value>
-                  <value>690970003</value>
-                </condition>
-                <condition attribute="statecode" operator="eq" value="0"/>
-              </filter>
-            </link-entity>
             <link-entity name="bookableresource" alias="L10" from="bookableresourceid" to="resource" link-type="inner">
               <filter type="and">
                 <condition attribute="userid" operator="eq-userid"/>
@@ -406,17 +395,6 @@
             <condition attribute="starttime" operator="last-x-days" value="14"/>
           </filter>
         </filter>
-        <link-entity name="bookingstatus" alias="L1" from="bookingstatusid" to="bookingstatus" link-type="inner">
-          <filter type="and">
-            <condition attribute="msdyn_fieldservicestatus" operator="in">
-              <value>690970003</value>
-              <value>690970002</value>
-              <value>690970001</value>
-              <value>690970000</value>
-            </condition>
-            <condition attribute="statecode" operator="eq" value="0"/>
-          </filter>
-        </link-entity>
         <link-entity name="bookableresource" alias="L2" from="bookableresourceid" to="resource" link-type="inner">
           <filter type="and">
             <filter type="and">

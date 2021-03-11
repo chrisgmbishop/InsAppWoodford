@@ -173,11 +173,6 @@
     <entity schema="bookableresourcebooking" permissions="256" conflict="16384" haslabels="true" xattr="35668224">
       <properties/>
       <indexes>
-        <index schema="idx_bookableresourcebooking_msdyn_resourcegroup" issystem="true">
-          <fields>
-            <field schema="msdyn_resourcegroup"/>
-          </fields>
-        </index>
         <index schema="idx_bookableresourcebooking_bookingstatus" issystem="true">
           <fields>
             <field schema="bookingstatus"/>
@@ -196,6 +191,11 @@
         <index schema="idx_bookableresourcebooking_msdyn_workorder" issystem="true">
           <fields>
             <field schema="msdyn_workorder"/>
+          </fields>
+        </index>
+        <index schema="idx_bookableresourcebooking_msdyn_resourcegroup" issystem="true">
+          <fields>
+            <field schema="msdyn_resourcegroup"/>
           </fields>
         </index>
         <index schema="idx_bookableresourcebooking_resource" issystem="true">
@@ -744,7 +744,6 @@
         </index>
       </indexes>
     </entity>
-
     <entity schema="msdyn_functionallocation" xattr="35651584">
       <properties>
         <property schema="createdon"/>
@@ -769,14 +768,14 @@
     <entity schema="msdyn_incidenttype" xattr="35651584">
       <properties/>
       <indexes>
-        <index schema="idx_msdyn_incidenttype_msdyn_defaultworkordertype" issystem="true">
-          <fields>
-            <field schema="msdyn_defaultworkordertype"/>
-          </fields>
-        </index>
         <index schema="idx_msdyn_incidenttype_ownerid" issystem="true">
           <fields>
             <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_msdyn_incidenttype_msdyn_defaultworkordertype" issystem="true">
+          <fields>
+            <field schema="msdyn_defaultworkordertype"/>
           </fields>
         </index>
         <index schema="idx_msdyn_incidenttype_msdyn_name" issystem="true">
@@ -1056,6 +1055,11 @@
             <field schema="msdyn_priority"/>
           </fields>
         </index>
+        <index schema="idx_msdyn_workorder_msdyn_primaryincidenttype" issystem="true">
+          <fields>
+            <field schema="msdyn_primaryincidenttype"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_workorder_msdyn_substatus" issystem="true">
           <fields>
             <field schema="msdyn_substatus"/>
@@ -1064,11 +1068,6 @@
         <index schema="idx_msdyn_workorder_msdyn_workordertype" issystem="true">
           <fields>
             <field schema="msdyn_workordertype"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_workorder_msdyn_primaryincidenttype" issystem="true">
-          <fields>
-            <field schema="msdyn_primaryincidenttype"/>
           </fields>
         </index>
         <index schema="idx_msdyn_workorder_msdyn_closedby" issystem="true">
@@ -1118,7 +1117,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderincident" haslabels="true" xattr="35651584">
+    <entity schema="msdyn_workorderincident" haslabels="true" xattr="37748736">
       <properties/>
       <indexes>
         <index schema="idx_msdyn_workorderincident_owninguser" issystem="true">
