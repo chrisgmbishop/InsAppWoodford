@@ -42,6 +42,10 @@
       </filter>
     </entity>
   </Fetch>
+  <Search>
+    <attribute schema="resco_description" method="Contains"/>
+    <attribute schema="resco_name" method="Contains"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
