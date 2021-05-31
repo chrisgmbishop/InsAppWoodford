@@ -1,4 +1,4 @@
-﻿<EntityList UseSyncFilter="true">
+﻿<EntityList>
   <Attributes>
     <EntityName>msdyn_customerasset</EntityName>
     <CamelCase>msdyn_customerasset</CamelCase>

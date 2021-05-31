@@ -282,6 +282,7 @@
                 <condition attribute="endtime" operator="next-x-days" value="30"/>
                 <condition attribute="endtime" operator="today"/>
                 <condition attribute="starttime" operator="last-x-days" value="7"/>
+                <condition attribute="starttime" operator="yesterday"/>
               </filter>
             </filter>
             <link-entity name="bookableresource" alias="L10" from="bookableresourceid" to="resource" link-type="inner">
