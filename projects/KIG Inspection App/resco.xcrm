@@ -170,7 +170,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="bookableresourcebooking" permissions="256" conflict="16384" haslabels="true" xattr="35668224">
+    <entity schema="bookableresourcebooking" permissions="256" conflict="16384" haslabels="true" xattr="2113792">
       <properties/>
       <indexes>
         <index schema="idx_bookableresourcebooking_resource" issystem="true">
@@ -318,59 +318,6 @@
         <index schema="idx_discount_name" issystem="true">
           <fields>
             <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="duplicaterule">
-      <properties>
-        <property schema="baseentityname"/>
-        <property schema="createdon"/>
-        <property schema="description"/>
-        <property schema="duplicateruleid"/>
-        <property schema="excludeinactiverecords"/>
-        <property schema="matchingentityname"/>
-        <property schema="modifiedon"/>
-        <property schema="name"/>
-        <property schema="ownerid"/>
-        <property schema="statecode"/>
-        <property schema="statuscode"/>
-      </properties>
-      <indexes>
-        <index schema="idx_duplicaterule_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
-          </fields>
-        </index>
-        <index schema="idx_duplicaterule_name" issystem="true">
-          <fields>
-            <field schema="name"/>
-          </fields>
-        </index>
-      </indexes>
-    </entity>
-    <entity schema="duplicaterulecondition">
-      <properties>
-        <property schema="baseattributename"/>
-        <property schema="createdon"/>
-        <property schema="duplicateruleconditionid"/>
-        <property schema="ignoreblankvalues"/>
-        <property schema="matchingattributename"/>
-        <property schema="modifiedon"/>
-        <property schema="operatorcode"/>
-        <property schema="operatorparam"/>
-        <property schema="ownerid"/>
-        <property schema="regardingobjectid"/>
-      </properties>
-      <indexes>
-        <index schema="idx_duplicaterulecondition_regardingobjectid" issystem="true">
-          <fields>
-            <field schema="regardingobjectid"/>
-          </fields>
-        </index>
-        <index schema="idx_duplicaterulecondition_ownerid" issystem="true">
-          <fields>
-            <field schema="ownerid"/>
           </fields>
         </index>
       </indexes>
@@ -569,7 +516,7 @@
         <property schema="btc_othermembranesurface"/>
         <property schema="btc_otinstallationbeentestedcalcedanswer"/>
         <property schema="btc_otsecondaryfixinghasbeenusedans"/>
-        <property schema="btc_physicaluid" fieldpermissions="Read Update"/>
+        <property schema="btc_physicaluid" fieldpermissions="Read"/>
         <property schema="btc_portladclassification"/>
         <property schema="btc_portladfixedstabilitydevices"/>
         <property schema="btc_portladladdertype"/>
@@ -743,7 +690,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_functionallocation" xattr="35651584">
+    <entity schema="msdyn_functionallocation">
       <properties>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
@@ -1116,7 +1063,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderincident" haslabels="true" xattr="37748736">
+    <entity schema="msdyn_workorderincident" haslabels="true">
       <properties/>
       <indexes>
         <index schema="idx_msdyn_workorderincident_msdyn_incidenttype" issystem="true">
@@ -2256,7 +2203,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="transactioncurrency" class="false" xattr="35651584">
+    <entity schema="transactioncurrency" class="false" xattr="2097152">
       <properties/>
       <indexes>
         <index schema="idx_transactioncurrency_currencyname" issystem="true">
