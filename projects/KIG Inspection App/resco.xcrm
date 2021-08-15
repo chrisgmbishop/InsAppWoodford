@@ -455,9 +455,12 @@
         <property schema="btc_clsafetycagehooptype"/>
         <property schema="btc_davanchorpointposition"/>
         <property schema="btc_davaretherehiddenelements"/>
+        <property schema="btc_davfixingdetailbaseplatetobase"/>
+        <property schema="btc_davfixturedetailanchortopost"/>
         <property schema="btc_davlengthh"/>
         <property schema="btc_davlengthl"/>
         <property schema="btc_davmaterialspecification"/>
+        <property schema="btc_davnumberofanchordevices"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
         <property schema="btc_dwaanchordeviceieeyeboltdemountable"/>
@@ -628,10 +631,11 @@
     </entity>
     <entity schema="msdyn_customerassetcategory" permissions="768" xattr="35652352">
       <properties>
+        <property schema="btc_description" fieldpermissions="Read"/>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
-        <property schema="msdyn_customerassetcategoryid"/>
-        <property schema="msdyn_name"/>
+        <property schema="msdyn_customerassetcategoryid" fieldpermissions="Read"/>
+        <property schema="msdyn_name" fieldpermissions="Read"/>
         <property schema="ownerid"/>
       </properties>
       <indexes>
