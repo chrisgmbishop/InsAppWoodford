@@ -31,11 +31,20 @@
   <Fetch version="1.0">
     <entity name="bookableresourcebooking">
       <filter type="and">
-        <condition attribute="starttime" operator="next-x-days" value="31"/>
         <filter type="or">
-          <condition attribute="bookingstatus" operator="eq" value="53f39908-d08a-4d9c-90e8-907fd7bec07d" uitype="bookingstatus" uiname="In Progress"/>
-          <condition attribute="bookingstatus" operator="eq" value="f16d80d1-fd07-4237-8b69-187a11eb75f9" uitype="bookingstatus" uiname="Scheduled"/>
-          <condition attribute="bookingstatus" operator="eq" value="048e769c-7e89-ea11-a811-00224801ce17" uitype="bookingstatus" uiname="MultiDay Overnight"/>
+          <filter type="and">
+            <condition attribute="starttime" operator="last-x-days" value="31"/>
+            <filter type="or">
+              <condition attribute="bookingstatus" operator="eq" value="f16d80d1-fd07-4237-8b69-187a11eb75f9" uitype="bookingstatus" uiname="Scheduled"/>
+              <condition attribute="bookingstatus" operator="eq" value="53f39908-d08a-4d9c-90e8-907fd7bec07d" uitype="bookingstatus" uiname="In Progress"/>
+              <condition attribute="bookingstatus" operator="eq" value="048e769c-7e89-ea11-a811-00224801ce17" uitype="bookingstatus" uiname="MultiDay Overnight"/>
+            </filter>
+          </filter>
+          <filter type="or">
+            <condition attribute="bookingstatus" operator="eq" value="53f39908-d08a-4d9c-90e8-907fd7bec07d" uitype="bookingstatus" uiname="In Progress"/>
+            <condition attribute="bookingstatus" operator="eq" value="f16d80d1-fd07-4237-8b69-187a11eb75f9" uitype="bookingstatus" uiname="Scheduled"/>
+            <condition attribute="bookingstatus" operator="eq" value="048e769c-7e89-ea11-a811-00224801ce17" uitype="bookingstatus" uiname="MultiDay Overnight"/>
+          </filter>
         </filter>
       </filter>
     </entity>
