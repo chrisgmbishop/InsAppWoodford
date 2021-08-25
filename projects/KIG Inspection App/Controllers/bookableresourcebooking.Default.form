@@ -183,7 +183,7 @@
           <LookupViews>msdyn_workorder.WorkOrderList</LookupViews>
         </DetailItem>
         <DetailItem SchemaName="bookingstatus">
-          <LookupViews>bookingstatus.*:bookingstatus.@Booking Statuses</LookupViews>
+          <LookupViews>&lt;lookup&gt;&lt;extra&gt;&lt;views&gt;bookingstatus.*:bookingstatus.@Booking Statuses&lt;/views&gt;&lt;/extra&gt;&lt;extra&gt;&lt;views&gt;bookingstatus.*:bookingstatus.@Booking Statuses&lt;/views&gt;&lt;filter entity="bookingstatus"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="bookingstatus"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="bookingstatusid" operator="ne" value="11c55a45-89f2-ea11-a815-00224801c242" uitype="bookingstatus" uiname="Incomplete"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
         </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
@@ -191,12 +191,12 @@
         <DetailItem SchemaName="starttime"/>
         <DetailItem SchemaName="msdyn_actualarrivaltime"/>
         <DetailItem SchemaName="endtime"/>
-        <DetailItem SchemaName="duration"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="msdyn_milestraveled"/>
         <DetailItem SchemaName="msdyn_actualtravelduration"/>
+        <DetailItem SchemaName="duration"/>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>
         </DetailItem>

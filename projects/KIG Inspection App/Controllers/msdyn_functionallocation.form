@@ -11,7 +11,7 @@
         <DetailItem SchemaName="msdyn_name"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
       <Name>Customer Assets List</Name>
       <Binding SchemaName="msdyn_customerasset.msdyn_functionallocation"/>
       <Views>msdyn_customerasset.*:msdyn_customerasset.@FilterView</Views>

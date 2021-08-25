@@ -17,6 +17,10 @@
     <string>msdyn_name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="btc_serialno" method="Contains"/>
+    <attribute schema="btc_physicaluid" method="BeginsWith"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>240</DesignWidth>
