@@ -701,6 +701,7 @@
         <property schema="createdon"/>
         <property schema="modifiedon"/>
         <property schema="msdyn_address1"/>
+        <property schema="msdyn_city"/>
         <property schema="msdyn_functionallocationid"/>
         <property schema="msdyn_name"/>
         <property schema="msdyn_postalcode"/>
