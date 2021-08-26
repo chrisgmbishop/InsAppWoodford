@@ -281,6 +281,7 @@
                 <condition attribute="starttime" operator="today"/>
                 <condition attribute="endtime" operator="next-x-days" value="30"/>
                 <condition attribute="endtime" operator="today"/>
+                <condition attribute="starttime" operator="last-week"/>
                 <condition attribute="starttime" operator="last-x-days" value="7"/>
               </filter>
             </filter>
@@ -416,6 +417,7 @@
             <condition attribute="endtime" operator="last-x-days" value="14"/>
             <condition attribute="endtime" operator="today"/>
             <condition attribute="starttime" operator="last-week"/>
+            <condition attribute="starttime" operator="today"/>
           </filter>
         </filter>
       </filter>

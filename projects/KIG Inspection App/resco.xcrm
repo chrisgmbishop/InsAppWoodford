@@ -462,6 +462,7 @@
         <property schema="btc_davlengthl"/>
         <property schema="btc_davmaterialspecification"/>
         <property schema="btc_davnumberofanchordevices"/>
+        <property schema="btc_davremovabledavitarm"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
         <property schema="btc_dwaanchordeviceieeyeboltdemountable"/>
@@ -599,9 +600,9 @@
             <field schema="msdyn_customerassetcategory"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_customerasset_msdyn_functionallocation" issystem="true">
+        <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
           <fields>
-            <field schema="msdyn_functionallocation"/>
+            <field schema="msdyn_product"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
@@ -617,6 +618,7 @@
         <index schema="idx_msdyn_customerasset_msdyn_parentasset" issystem="true">
           <fields>
             <field schema="msdyn_parentasset"/>
+
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
