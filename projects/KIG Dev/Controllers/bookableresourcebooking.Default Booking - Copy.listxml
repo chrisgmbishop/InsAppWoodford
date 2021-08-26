@@ -1,0 +1,76 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>bookableresourcebooking</EntityName>
+    <CamelCase>bookableresourcebooking</CamelCase>
+  </Attributes>
+  <Name>Default Booking - Copy</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_actualarrivaltime</string>
+    <string>bookableresourcebookingid</string>
+    <string>endtime</string>
+    <string>msdyn_latitude</string>
+    <string>msdyn_longitude</string>
+    <string>name</string>
+    <string>resource</string>
+    <string>starttime</string>
+    <string>statecode</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="resource">
+          <StyleName>primary</StyleName>
+          <Bounds>10,30,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="starttime">
+          <StyleName>primary</StyleName>
+          <Bounds>82,30,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="endtime">
+          <StyleName>primary</StyleName>
+          <Bounds>155,30,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_latitude">
+          <StyleName>primary</StyleName>
+          <Bounds>228,29,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_longitude">
+          <StyleName>primary</StyleName>
+          <Bounds>239,0,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="statecode">
+          <StyleName>primary</StyleName>
+          <Bounds>167,1,73,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

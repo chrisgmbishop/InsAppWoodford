@@ -1,4 +1,4 @@
-﻿<EntityList>
+﻿<EntityList UseSyncFilter="true">
   <Attributes>
     <EntityName>msdyn_functionallocation</EntityName>
     <CamelCase>msdyn_functionallocation</CamelCase>
@@ -10,6 +10,8 @@
   <SerializedBindings>
     <string>msdyn_functionallocationid</string>
     <string>msdyn_name</string>
+    <string>msdyn_postalcode</string>
+    <string>msdyn_address1</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Fetch version="1.0">
@@ -35,6 +37,18 @@
         <CellTemplate SchemaName="msdyn_name">
           <StyleName>primary</StyleName>
           <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_address1">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,146,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_postalcode">
+          <StyleName>r_gray</StyleName>
+          <Bounds>157,31,152,13</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>

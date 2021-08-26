@@ -434,6 +434,7 @@
         <property schema="btc_aretheregatesfittedtothesystem"/>
         <property schema="btc_aretoeboardspresentonsystem"/>
         <property schema="btc_assetsource"/>
+        <property schema="btc_assetwebsite"/>
         <property schema="btc_brandproductname"/>
         <property schema="btc_cablematerial"/>
         <property schema="btc_cablespecification"/>
@@ -554,6 +555,7 @@
         <property schema="btc_safetygatesgatewidth"/>
         <property schema="btc_safetygatesmaterialspecification"/>
         <property schema="btc_safetygatesspringloaded"/>
+        <property schema="btc_serialno"/>
         <property schema="btc_soapbasematerialrooftype"/>
         <property schema="btc_soapfixturetype"/>
         <property schema="btc_soapmaterialspecguardrail"/>
@@ -588,14 +590,19 @@
         <property schema="msdyn_functionallocation"/>
       </properties>
       <indexes>
+        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
+          <fields>
+            <field schema="msdyn_masterasset"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_msdyn_customerassetcategory" issystem="true">
           <fields>
             <field schema="msdyn_customerassetcategory"/>
           </fields>
         </index>
-        <index schema="idx_msdyn_customerasset_msdyn_functionallocation" issystem="true">
+        <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
           <fields>
-            <field schema="msdyn_functionallocation"/>
+            <field schema="msdyn_product"/>
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_product" issystem="true">
@@ -611,11 +618,7 @@
         <index schema="idx_msdyn_customerasset_msdyn_parentasset" issystem="true">
           <fields>
             <field schema="msdyn_parentasset"/>
-          </fields>
-        </index>
-        <index schema="idx_msdyn_customerasset_msdyn_masterasset" issystem="true">
-          <fields>
-            <field schema="msdyn_masterasset"/>
+
           </fields>
         </index>
         <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
@@ -632,10 +635,11 @@
     </entity>
     <entity schema="msdyn_customerassetcategory" permissions="768" xattr="35652352">
       <properties>
+        <property schema="btc_description" fieldpermissions="Read"/>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
-        <property schema="msdyn_customerassetcategoryid"/>
-        <property schema="msdyn_name"/>
+        <property schema="msdyn_customerassetcategoryid" fieldpermissions="Read"/>
+        <property schema="msdyn_name" fieldpermissions="Read"/>
         <property schema="ownerid"/>
       </properties>
       <indexes>
@@ -698,8 +702,11 @@
       <properties>
         <property schema="createdon"/>
         <property schema="modifiedon"/>
+        <property schema="msdyn_address1"/>
+        <property schema="msdyn_city"/>
         <property schema="msdyn_functionallocationid"/>
         <property schema="msdyn_name"/>
+        <property schema="msdyn_postalcode"/>
         <property schema="ownerid"/>
       </properties>
       <indexes>
@@ -1068,7 +1075,9 @@
       </indexes>
     </entity>
     <entity schema="msdyn_workorderincident" haslabels="true">
-      <properties/>
+      <properties>
+        <property schema="msdyn_incidentresolved"/>
+      </properties>
       <indexes>
         <index schema="idx_msdyn_workorderincident_msdyn_incidenttype" issystem="true">
           <fields>

@@ -9,9 +9,12 @@
       <Name>General</Name>
       <SerializedChildren>
         <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_city"/>
+        <DetailItem SchemaName="msdyn_address1"/>
+        <DetailItem SchemaName="msdyn_postalcode"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
       <Name>Customer Assets List</Name>
       <Binding SchemaName="msdyn_customerasset.msdyn_functionallocation"/>
       <Views>msdyn_customerasset.*:msdyn_customerasset.@FilterView</Views>
