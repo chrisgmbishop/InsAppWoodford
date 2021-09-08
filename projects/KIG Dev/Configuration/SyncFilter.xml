@@ -4,8 +4,8 @@
       <filter type="and">
         <condition attribute="statecode" operator="eq" value="0"/>
       </filter>
-      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_serviceaccount" to="accountid" link-type="outer"/>
-      <link-entity name="msdyn_workorder" alias="L1" from="msdyn_billingaccount" to="accountid" link-type="outer"/>
+      <link-entity name="msdyn_workorder" alias="L0" from="msdyn_billingaccount" to="accountid" link-type="inner"/>
+      <link-entity name="msdyn_workorder" alias="L1" from="msdyn_serviceaccount" to="accountid" link-type="inner"/>
     </entity>
   </fetch>
   <fetch version="1.0">
@@ -281,6 +281,7 @@
                 <condition attribute="starttime" operator="today"/>
                 <condition attribute="endtime" operator="next-x-days" value="30"/>
                 <condition attribute="endtime" operator="today"/>
+                <condition attribute="starttime" operator="last-x-days" value="7"/>
                 <condition attribute="starttime" operator="last-week"/>
               </filter>
             </filter>
@@ -292,12 +293,6 @@
                   <value>690970002</value>
                   <value>690970003</value>
                 </condition>
-                <condition attribute="statecode" operator="eq" value="0"/>
-              </filter>
-            </link-entity>
-            <link-entity name="bookableresource" alias="L10" from="bookableresourceid" to="resource" link-type="inner">
-              <filter type="and">
-                <condition attribute="userid" operator="eq-userid"/>
                 <condition attribute="statecode" operator="eq" value="0"/>
               </filter>
             </link-entity>
@@ -395,6 +390,29 @@
           <value>690970000</value>
         </condition>
       </filter>
+      <link-entity name="bookableresourcebooking" alias="L0" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <filter type="or">
+            <condition attribute="starttime" operator="today"/>
+            <condition attribute="starttime" operator="last-week"/>
+            <condition attribute="starttime" operator="next-x-days" value="30"/>
+            <condition attribute="endtime" operator="today"/>
+            <condition attribute="endtime" operator="next-x-days" value="30"/>
+          </filter>
+        </filter>
+        <link-entity name="bookingstatus" alias="L1" from="bookingstatusid" to="bookingstatus" link-type="inner">
+          <filter type="and">
+            <condition attribute="msdyn_fieldservicestatus" operator="in">
+              <value>690970003</value>
+              <value>690970002</value>
+              <value>690970000</value>
+              <value>690970001</value>
+            </condition>
+            <condition attribute="statecode" operator="eq" value="0"/>
+          </filter>
+        </link-entity>
+      </link-entity>
     </entity>
   </fetch>
   <fetch version="1.0">
@@ -404,11 +422,24 @@
           <condition attribute="statecode" operator="eq" value="0"/>
           <filter type="or">
             <condition attribute="starttime" operator="next-x-days" value="30"/>
-            <condition attribute="endtime" operator="last-x-days" value="14"/>
+            <condition attribute="endtime" operator="next-x-days" value="30"/>
             <condition attribute="starttime" operator="today"/>
+            <condition attribute="starttime" operator="last-week"/>
+            <condition attribute="endtime" operator="today"/>
           </filter>
         </filter>
       </filter>
+      <link-entity name="bookingstatus" alias="L0" from="bookingstatusid" to="bookingstatus" link-type="inner">
+        <filter type="and">
+          <condition attribute="msdyn_fieldservicestatus" operator="in">
+            <value>690970003</value>
+            <value>690970002</value>
+            <value>690970000</value>
+            <value>690970001</value>
+          </condition>
+          <condition attribute="statecode" operator="eq" value="0"/>
+        </filter>
+      </link-entity>
     </entity>
   </fetch>
   <fetch version="1.0">
@@ -884,5 +915,13 @@
   </fetch>
   <fetch version="1.0">
     <entity name="sharepointdocumentlocation"/>
+  </fetch>
+  <fetch version="1.0">
+    <entity name="resco_usersettings">
+      <filter type="or">
+        <condition attribute="resco_kind" operator="like" value="App.%"/>
+        <condition attribute="resco_kind" operator="like" value="Global.%"/>
+      </filter>
+    </entity>
   </fetch>
 </fetchcollection>

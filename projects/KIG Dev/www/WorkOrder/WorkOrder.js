@@ -1,4 +1,4 @@
-/// <reference path="../JSBridge.js" />
+﻿/// <reference path="../JSBridge.js" />
 /// <reference path="../Schema.js" />
 /// <reference path="../Enums.js" />
 /// <reference path="../Common.js" />
@@ -15,9 +15,11 @@ FS.WorkOrder = {
     localization: null,
 
     workOrderOnLoad: function () {
+
         MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customFollowUp, FS.FollowUpWOHelper.FollowUpButton.onButtonClick, true, null);
         MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customSendIoTCommand, FS.SendCommandHelper.SendCommandButton.onButtonClick, true, null);
         MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customRemoteAssist, FS.RemoteAssist.onButtonClick, true, null);
+        MobileCRM.UI.EntityForm.onCommand("custom_createWorkOrderIncident", this.createWorkOrderIncident, true, null); // Added by Dan, replace hard coded values with enums
         FS.RemoteAssist.showHideRemoteAssistButton();
 
         MobileCRM.Localization.initialize(FS.WorkOrder.storeLocalization, MobileCRM.bridge.alert);
@@ -378,5 +380,58 @@ FS.WorkOrder = {
 
     storeLocalization: function (localization) {
         FS.WorkOrder.localization = localization;
+    },
+
+    // Added by Dan
+    createWorkOrderIncident: function (entityForm) {
+
+        // Prompt user for incident type
+        var msg = new MobileCRM.UI.MessageBox("Select Incident Type?");
+        msg.items = ["Installation", "Recertification"]; 
+
+        msg.show(function (incidentTypeName) {
+
+            let incidentTypeGuid = "";
+            if (incidentTypeName === "Installation") {
+                incidentTypeGuid = "a311fc9c-5270-ea11-a811-00224801c242";   // Installation - 		a311fc9c-5270-ea11-a811-00224801c242
+            } else if (incidentTypeName === "Recertification") {
+                incidentTypeGuid = "56618a2e-744c-ea11-a812-00224801ce17";   // Recertification - 	56618a2e-744c-ea11-a812-00224801ce17
+            }
+
+            // Get the account of the work order
+            const workOrderServiceAccount = entityForm.entity.properties.msdyn_serviceaccount;
+
+            const customerAsset = new MobileCRM.DynamicEntity("msdyn_customerasset");
+            customerAsset.properties.msdyn_account = workOrderServiceAccount;
+
+            customerAsset.save(function (error) {
+                if (error) {
+                    MobileCRM.bridge.alert("An error occurred saving the customer asset: " + error);
+                }
+                else {
+
+                    const customerAssetRef = this;
+
+                    const workOrderIncident = new MobileCRM.DynamicEntity("msdyn_workorderincident");
+
+                    workOrderIncident.properties.msdyn_incidenttype = new MobileCRM.Reference("msdyn_incidenttype", incidentTypeGuid); 
+                    workOrderIncident.properties.msdyn_workorder = entityForm.entity;
+                    workOrderIncident.properties.msdyn_customerasset = new MobileCRM.Reference(customerAssetRef.entityName, customerAssetRef.id);
+            
+                    workOrderIncident.save(function (error) {
+                        if (error) {
+                            MobileCRM.bridge.alert("An error occurred saving the work order incident: " + error);
+                        }
+                        else {
+            
+                            MobileCRM.UI.FormManager.showEditDialog(customerAssetRef.entityName, customerAssetRef.id);
+                        }
+                    });    
+
+
+                }
+            });
+
+        });
     }
 };
