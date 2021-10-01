@@ -1,4 +1,4 @@
-/// <reference path="../JSBridge.js" />
+﻿/// <reference path="../JSBridge.js" />
 /// <reference path="../Schema.js" />
 /// <reference path="../Enums.js" />
 /// <reference path="../Common.js" />
@@ -25,6 +25,8 @@ FS.BookableResourceBooking = {
         MobileCRM.Localization.initialize(FS.BookableResourceBooking.storeLocalization, MobileCRM.bridge.alert);
         MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customFollowUp, FS.FollowUpWOHelper.FollowUpButton.onButtonClick, true, null);
         MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customRemoteAssist, FS.RemoteAssist.onButtonClick, true, null);
+        MobileCRM.UI.EntityForm.onCommand(FS.Common.CustomCommands.customCreateWorkOrderIncident, this.createWorkOrderIncident, true, null); 
+        
         FS.RemoteAssist.showHideRemoteAssistButton();
         MobileCRM.UI.EntityForm.onChange(FS.BookableResourceBooking.handleChange, true, null);
         MobileCRM.UI.EntityForm.onSave(FS.BookableResourceBooking.handleSave, true, null);
@@ -509,5 +511,68 @@ FS.BookableResourceBooking = {
 
         // get required settings for synchronize and execute server record update operation
         MobileCRM.Configuration.requestObject(FS.BookableResourceBooking.getSettingsForSyncAndHandleServerRecordUpdate, FS.BookableResourceBooking.messageBox);
+    },
+
+    createWorkOrderIncident: function (entityForm) {
+
+        // Prompt user for incident type
+        var msg = new MobileCRM.UI.MessageBox("Select Incident Type?");
+        msg.items = ["Installation", "Recertification"]; 
+
+        msg.show(function (incidentTypeName) {
+
+            let incidentTypeGuid = "";
+            if (incidentTypeName === "Installation") {
+                incidentTypeGuid = "a311fc9c-5270-ea11-a811-00224801c242";   // Installation - 		a311fc9c-5270-ea11-a811-00224801c242
+            } else if (incidentTypeName === "Recertification") {
+                incidentTypeGuid = "56618a2e-744c-ea11-a812-00224801ce17";   // Recertification - 	56618a2e-744c-ea11-a812-00224801ce17
+            }
+
+            // Get the work order for this bookable resource booking
+            const workOrderRef = entityForm.entity.properties.msdyn_workorder;
+
+            MobileCRM.DynamicEntity.loadById(workOrderRef.entityName, workOrderRef.id, function (workOrderEntity) {
+                    
+                // Get the account of the work order
+                const workOrderServiceAccount = workOrderEntity.properties.msdyn_serviceaccount;
+
+                const customerAsset = new MobileCRM.DynamicEntity("msdyn_customerasset");
+                customerAsset.properties.msdyn_account = workOrderServiceAccount;
+
+                customerAsset.save(function (error) {
+                    if (error) {
+                        MobileCRM.bridge.alert("An error occurred saving the customer asset: " + error);
+                    }
+                    else {
+
+                        const customerAssetRef = this;
+
+                        const workOrderIncident = new MobileCRM.DynamicEntity("msdyn_workorderincident");
+
+                        workOrderIncident.properties.msdyn_incidenttype = new MobileCRM.Reference("msdyn_incidenttype", incidentTypeGuid); 
+                        workOrderIncident.properties.msdyn_workorder = workOrderEntity;
+                        workOrderIncident.properties.msdyn_customerasset = new MobileCRM.Reference(customerAssetRef.entityName, customerAssetRef.id);
+
+                        workOrderIncident.save(function (error) {
+                            if (error) {
+                                MobileCRM.bridge.alert("An error occurred saving the work order incident: " + error);
+                            }
+                            else {
+
+                                MobileCRM.UI.FormManager.showEditDialog(customerAssetRef.entityName, customerAssetRef.id);
+                            }
+                        });    
+
+
+                    }
+                });
+
+            },
+            function (error) {
+                MobileCRM.bridge.alert("An error occurred: " + error);
+            },
+            null);
+        });
+        
     }
 };

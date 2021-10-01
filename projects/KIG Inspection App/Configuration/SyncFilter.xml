@@ -281,7 +281,6 @@
                 <condition attribute="starttime" operator="today"/>
                 <condition attribute="endtime" operator="next-x-days" value="30"/>
                 <condition attribute="endtime" operator="today"/>
-                <condition attribute="starttime" operator="last-week"/>
                 <condition attribute="starttime" operator="last-x-days" value="7"/>
               </filter>
             </filter>
@@ -417,7 +416,6 @@
             <condition attribute="endtime" operator="last-x-days" value="14"/>
             <condition attribute="endtime" operator="today"/>
             <condition attribute="starttime" operator="last-week"/>
-            <condition attribute="starttime" operator="today"/>
           </filter>
         </filter>
       </filter>
@@ -882,21 +880,15 @@
   <fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <filter type="and">
-          <filter type="or">
-            <condition attribute="resco_istemplate" operator="eq" value="0"/>
-            <condition attribute="createdon" operator="last-x-months" value="2"/>
-            <filter type="and">
-              <condition attribute="resco_istemplate" operator="eq" value="1"/>
-              <filter type="or">
-                <condition attribute="statuscode" operator="eq" value="1"/>
-                <condition attribute="statuscode" operator="eq" value="473220002"/>
-              </filter>
+        <filter type="or">
+          <condition attribute="resco_istemplate" operator="eq" value="0"/>
+          <condition attribute="createdon" operator="last-x-days" value="4"/>
+          <filter type="and">
+            <condition attribute="resco_istemplate" operator="eq" value="1"/>
+            <filter type="or">
+              <condition attribute="statuscode" operator="eq" value="1"/>
+              <condition attribute="statuscode" operator="eq" value="473220002"/>
             </filter>
-          </filter>
-          <filter type="or">
-            <condition attribute="resco_issnippet" operator="eq" value="0"/>
-            <condition attribute="resco_issnippet" operator="null"/>
           </filter>
         </filter>
       </filter>
@@ -914,33 +906,9 @@
     </entity>
   </fetch>
   <fetch version="1.0">
-    <entity name="resco_questiongroup">
-      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="inner">
-        <filter type="and">
-          <filter type="or">
-            <condition attribute="resco_istemplate" operator="eq" value="1"/>
-            <filter type="and">
-              <condition attribute="resco_istemplate" operator="eq" value="0"/>
-              <condition attribute="createdon" operator="last-x-months" value="2"/>
-            </filter>
-          </filter>
-        </filter>
-      </link-entity>
-    </entity>
+    <entity name="resco_questiongroup"/>
   </fetch>
   <fetch version="1.0">
-    <entity name="resco_question">
-      <link-entity name="resco_questionnaire" alias="L0" from="resco_questionnaireid" to="resco_questionnaireid" link-type="inner">
-        <filter type="and">
-          <filter type="or">
-            <condition attribute="resco_istemplate" operator="eq" value="1"/>
-            <filter type="and">
-              <condition attribute="resco_istemplate" operator="eq" value="0"/>
-              <condition attribute="createdon" operator="last-x-months" value="2"/>
-            </filter>
-          </filter>
-        </filter>
-      </link-entity>
-    </entity>
+    <entity name="resco_question"/>
   </fetch>
 </fetchcollection>

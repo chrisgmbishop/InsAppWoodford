@@ -168,7 +168,7 @@
       &lt;/branch&gt;
   &lt;/Workflow&gt;</WorkflowCommandCanExecute>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
-  <PrimaryCommands>custom_FollowUp|Cmd.RunFollowUp||custom_RemoteAssist|Cmd.RemoteAssist|</PrimaryCommands>
+  <PrimaryCommands>custom_FollowUp|Cmd.RunFollowUp||custom_RemoteAssist|Cmd.RemoteAssist||custom_createWorkOrderIncident|New Asset|</PrimaryCommands>
   <SharedVariableNames/>
   <ClassBinding>
     <SerializedClassBinding name="#WorkOrder" label="WorkOrder" type="String"/>

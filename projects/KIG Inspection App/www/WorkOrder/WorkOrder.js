@@ -1,4 +1,4 @@
-/// <reference path="../JSBridge.js" />
+﻿/// <reference path="../JSBridge.js" />
 /// <reference path="../Schema.js" />
 /// <reference path="../Enums.js" />
 /// <reference path="../Common.js" />
@@ -379,4 +379,5 @@ FS.WorkOrder = {
     storeLocalization: function (localization) {
         FS.WorkOrder.localization = localization;
     }
+}
 };

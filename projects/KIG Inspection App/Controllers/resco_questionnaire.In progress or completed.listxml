@@ -1,4 +1,4 @@
-﻿<EntityList>
+﻿<EntityList UseSyncFilter="true">
   <Attributes>
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>

@@ -1,4 +1,4 @@
-﻿<EntityList>
+﻿<EntityList UseSyncFilter="true">
   <Attributes>
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
@@ -36,7 +36,7 @@
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition attribute="createdon" operator="on-or-after" value="2020-10-25"/>
+        <condition attribute="createdon" operator="last-month"/>
         <condition attribute="resco_completionstatus" operator="eq" value="1"/>
       </filter>
     </entity>

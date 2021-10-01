@@ -1,4 +1,4 @@
-var FS = FS || {};
+﻿var FS = FS || {};
 
 FS.Common = {
     messageBox: function (message, items, callback) {
@@ -27,7 +27,8 @@ FS.Common = {
         customRegisterDevice: "custom_RegisterDevice",
         customRegisterDevices: "custom_RegisterDevices",
         customRemoteAssist: "custom_RemoteAssist",
-        customSendIoTCommand: "custom_SendIoTCommand"
+        customSendIoTCommand: "custom_SendIoTCommand",
+        customCreateWorkOrderIncident: "custom_createWorkOrderIncident"
     }, 
 
     executeFetch: function (fetch, output, scope) {
