@@ -1,0 +1,32 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>btc_teststandard</EntityName>
+    <CamelCase>btc_teststandard</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>LookupList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>btc_name</OrderBy>
+  <SerializedBindings>
+    <string>btc_teststandardid</string>
+    <string>btc_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="btc_name">
+          <StyleName>LongText</StyleName>
+          <Bounds>10,2,302,42</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
