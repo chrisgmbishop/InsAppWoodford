@@ -23,6 +23,7 @@
         <filter type="and">
           <condition attribute="statecode" operator="eq" value="0"/>
           <condition attribute="msdyn_incidentresolved" operator="eq" value="0"/>
+          <condition attribute="btc_currentreportfilter" operator="eq" value="1"/>
         </filter>
         <link-entity name="msdyn_workorder" alias="L1" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>
       </link-entity>

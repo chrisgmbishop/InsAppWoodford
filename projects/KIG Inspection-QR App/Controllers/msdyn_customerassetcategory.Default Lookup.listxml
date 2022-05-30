@@ -3,8 +3,8 @@
     <EntityName>msdyn_customerassetcategory</EntityName>
     <CamelCase>msdyn_customerassetcategory</CamelCase>
   </Attributes>
-  <Name>Default</Name>
-  <Kind>List</Kind>
+  <Name>Default Lookup</Name>
+  <Kind>LookupList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_name</OrderBy>
   <SerializedBindings>
