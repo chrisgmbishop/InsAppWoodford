@@ -1,0 +1,64 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>msdyn_customerasset</EntityName>
+    <CamelCase>msdyn_customerasset</CamelCase>
+  </Attributes>
+  <Name>FilterView</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_customerassetcategory</OrderBy>
+  <SortAllowedFields>btc_existingasset;createdon;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
+  <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
+  <SerializedBindings>
+    <string>btc_assetwebsite</string>
+    <string>msdyn_customerassetcategory</string>
+    <string>msdyn_customerassetid</string>
+    <string>msdyn_functionallocation</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_customerasset">
+      <link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="0"/>
+          <condition attribute="msdyn_incidentresolved" operator="eq" value="0"/>
+        </filter>
+        <link-entity name="msdyn_workorder" alias="L1" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>
+      </link-entity>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+    <attribute schema="msdyn_functionallocation" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>275</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,246,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_customerassetcategory">
+          <StyleName>gray</StyleName>
+          <Bounds>10,30,120,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_functionallocation">
+          <StyleName>gray</StyleName>
+          <Bounds>130,30,126,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
