@@ -1,0 +1,35 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>msdyn_customerassetcategory</EntityName>
+    <CamelCase>msdyn_customerassetcategory</CamelCase>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SerializedBindings>
+    <string>msdyn_customerassetcategoryid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>
