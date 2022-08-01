@@ -12,6 +12,7 @@
   <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
   <SerializedBindings>
     <string>msdyn_account</string>
+    <string>btc_assetwebsite</string>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
     <string>msdyn_name</string>

@@ -3,7 +3,11 @@
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding/>
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
   </Attributes>
   <Name>In progress or completed</Name>
   <Kind>List</Kind>

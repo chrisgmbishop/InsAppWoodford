@@ -10,6 +10,7 @@
   <SortAllowedFields>btc_existingasset;createdon;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
   <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
   <SerializedBindings>
+    <string>btc_assetwebsite</string>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
     <string>msdyn_functionallocation</string>

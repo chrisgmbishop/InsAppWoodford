@@ -885,7 +885,7 @@
         <filter type="and">
           <filter type="or">
             <condition attribute="resco_istemplate" operator="eq" value="0"/>
-            <condition attribute="createdon" operator="last-x-months" value="2"/>
+            <condition attribute="createdon" operator="last-x-days" value="10"/>
             <filter type="and">
               <condition attribute="resco_istemplate" operator="eq" value="1"/>
               <filter type="or">
@@ -921,7 +921,7 @@
             <condition attribute="resco_istemplate" operator="eq" value="1"/>
             <filter type="and">
               <condition attribute="resco_istemplate" operator="eq" value="0"/>
-              <condition attribute="createdon" operator="last-x-months" value="2"/>
+              <condition attribute="createdon" operator="last-x-months" value="1"/>
             </filter>
           </filter>
         </filter>
@@ -936,7 +936,7 @@
             <condition attribute="resco_istemplate" operator="eq" value="1"/>
             <filter type="and">
               <condition attribute="resco_istemplate" operator="eq" value="0"/>
-              <condition attribute="createdon" operator="last-x-months" value="2"/>
+              <condition attribute="createdon" operator="last-x-months" value="1"/>
             </filter>
           </filter>
         </filter>
