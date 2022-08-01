@@ -10,14 +10,17 @@
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_name</OrderBy>
   <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>msdyn_account</string>
     <string>btc_assetwebsite</string>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
     <string>msdyn_name</string>
+    <string>statuscode</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="statusBlockColouring" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:GreenTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630002&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:CPTag&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:CFTag&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:RedTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
@@ -34,7 +37,7 @@
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_name">
           <StyleName>primary</StyleName>
-          <Bounds>17,14,295,27</Bounds>
+          <Bounds>17,14,270,27</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
@@ -43,6 +46,13 @@
           <Bounds>169,40,144,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackTag1</StyleName>
+          <Bounds>293,19,14,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

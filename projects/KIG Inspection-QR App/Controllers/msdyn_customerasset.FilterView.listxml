@@ -9,16 +9,22 @@
   <OrderBy>msdyn_customerassetcategory</OrderBy>
   <SortAllowedFields>btc_existingasset;createdon;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
   <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>btc_assetwebsite</string>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
     <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
+    <string>statuscode</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="statusBlockColouring" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:GreenTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630002&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:CPTag&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630001&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:CFTag&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.statuscode&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Status:962630000&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row. .Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:RedTag1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="msdyn_customerasset">
+      <filter type="and">
+        <condition attribute="statuscode" operator="eq" value="962630003"/>
+      </filter>
       <link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
         <filter type="and">
           <condition attribute="statecode" operator="eq" value="0"/>
@@ -38,28 +44,36 @@
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>275</Width>
-      <Height>48</Height>
+      <Width>320</Width>
+      <Height>95</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="msdyn_name">
           <StyleName>primary</StyleName>
-          <Bounds>10,2,246,28</Bounds>
+          <Bounds>39,13,275,28</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_customerassetcategory">
-          <StyleName>gray</StyleName>
-          <Bounds>10,30,120,14</Bounds>
+          <StyleName>greyLRG</StyleName>
+          <Bounds>39,43,275,23</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_functionallocation">
-          <StyleName>gray</StyleName>
-          <Bounds>130,30,126,14</Bounds>
+          <StyleName>greyLRG</StyleName>
+          <Bounds>39,68,275,23</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName=" ">
+          <IsConstant>true</IsConstant>
+          <StyleName>BlackTag1</StyleName>
+          <Bounds>12,19,17,17</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
+  <CustomProperties/>
 </EntityList>

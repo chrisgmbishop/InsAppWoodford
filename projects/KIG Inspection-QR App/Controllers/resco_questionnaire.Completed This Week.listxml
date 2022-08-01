@@ -3,7 +3,11 @@
     <EntityName>resco_questionnaire</EntityName>
     <CamelCase>resco_questionnaire</CamelCase>
     <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
-    <ClassBinding />
+    <ClassBinding>
+      <SerializedClassBinding name="#Name" label="Localized Name" type="String"/>
+      <SerializedClassBinding name="#Description" label="Localized Description" type="String"/>
+      <SerializedClassBinding name="#LocalizedResult" label="Localized Result" type="String"/>
+    </ClassBinding>
   </Attributes>
   <Name>Completed This Week</Name>
   <Kind>DashboardList</Kind>
@@ -28,9 +32,9 @@
   <Fetch version="1.0">
     <entity name="resco_questionnaire">
       <filter type="and">
-        <condition value="0" attribute="resco_istemplate" operator="eq" />
-        <condition value="7" attribute="createdon" operator="last-x-days" />
-        <condition attribute="ownerid" operator="eq-userid" />
+        <condition attribute="resco_istemplate" operator="eq" value="0"/>
+        <condition attribute="createdon" operator="last-x-days" value="7"/>
+        <condition attribute="ownerid" operator="eq-userid"/>
       </filter>
     </entity>
   </Fetch>
@@ -49,13 +53,13 @@
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="resco_description">
-          <StyleName>Secondary</StyleName>
+          <StyleName>primary</StyleName>
           <Bounds>8,26,224,18</Bounds>
           <CellKind>0</CellKind>
           <Anchor>15</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="modifiedon">
-          <StyleName>Secondary Right Date</StyleName>
+          <StyleName>primary</StyleName>
           <Bounds>162,2,70,24</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
@@ -63,5 +67,5 @@
       </SerializedChildren>
     </RowTemplate>
   </SerializedTemplates>
-  <CustomProperties />
+  <CustomProperties/>
 </EntityList>

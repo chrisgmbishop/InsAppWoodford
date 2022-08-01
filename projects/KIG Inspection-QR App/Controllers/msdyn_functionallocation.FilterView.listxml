@@ -17,6 +17,9 @@
   <Fetch version="1.0">
     <entity name="msdyn_functionallocation">
       <link-entity name="msdyn_customerasset" alias="L0" from="msdyn_functionallocation" to="msdyn_functionallocationid" link-type="inner">
+        <filter type="and">
+          <condition attribute="statuscode" operator="eq" value="962630003"/>
+        </filter>
         <link-entity name="msdyn_workorderincident" alias="L1" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
           <link-entity name="msdyn_workorder" alias="L2" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>
         </link-entity>
