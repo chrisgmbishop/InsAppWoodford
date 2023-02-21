@@ -46,12 +46,17 @@
         <DetailItem SchemaName="btc_eyeboltbasematerial"/>
         <DetailItem SchemaName="btc_otherbasematerial"/>
         <DetailItem SchemaName="btc_structuralconfiguration"/>
+        <DetailItem SchemaName="btc_fixingspecificationbaseplatetobase"/>
+        <DetailItem SchemaName="btc_davfixingdetailbaseplatetobase"/>
         <DetailItem SchemaName="btc_fixturetype"/>
         <DetailItem SchemaName="btc_otherfixturetype"/>
+        <DetailItem SchemaName="btc_aretherehiddenorweatherproofedfixings"/>
         <DetailItem SchemaName="btc_ebcategoryofuse"/>
         <DetailItem SchemaName="btc_ebdirectionofloading"/>
-        <DetailItem SchemaName="btc_canthestructuralconnectioninspected"/>
+        <DetailItem SchemaName="btc_maxofusers"/>
+        <DetailItem SchemaName="btc_maxuserweight"/>
         <DetailItem SchemaName="btc_ebaretheredemountablecomponents"/>
+        <DetailItem SchemaName="btc_aretheredrings2"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
@@ -247,12 +252,30 @@
       <SerializedChildren>
         <DetailItem SchemaName="btc_standardselectiondavits"/>
         <DetailItem SchemaName="btc_otherbrand"/>
+        <DetailItem SchemaName="btc_maxofusers"/>
+        <DetailItem SchemaName="btc_maxuserweight"/>
+        <DetailItem SchemaName="btc_typeofuse"/>
         <DetailItem SchemaName="btc_ebcategoryofuse"/>
-        <DetailItem SchemaName="btc_davmaterialspecification"/>
         <DetailItem SchemaName="btc_davnumberofanchordevices"/>
-        <DetailItem SchemaName="btc_davanchorpointposition"/>
+        <DetailItem SchemaName="btc_aretherehiddenorweatherproofedfixings"/>
+        <DetailItem SchemaName="btc_davlengthh"/>
+        <DetailItem SchemaName="btc_davlengthl"/>
+        <DetailItem SchemaName="btc_baseplatepostbasedimensionsmm"/>
+        <DetailItem SchemaName="btc_baseplatepostbasedimensionswmm"/>
+        <DetailItem SchemaName="btc_totalnoofstructuralanchors"/>
+        <DetailItem SchemaName="btc_aretheredrings2"/>
+        <DetailItem SchemaName="btc_eyeboltbasematerial"/>
         <DetailItem SchemaName="btc_rastructuralconfiguration"/>
+        <DetailItem SchemaName="btc_davmaterialspecification"/>
         <DetailItem SchemaName="btc_davfixingdetailbaseplatetobase"/>
+        <DetailItem SchemaName="btc_fixingspecificationbaseplatetobase"/>
+        <DetailItem SchemaName="btc_davfixturedetailanchortopost"/>
+        <DetailItem SchemaName="btc_ffxingspecificationanchortopost"/>
+        <DetailItem SchemaName="btc_davanchorpointposition"/>
+        <DetailItem SchemaName="btc_ebaretheredemountablecomponents"/>
+        <DetailItem SchemaName="btc_ebdirectionofloading"/>
+        <DetailItem SchemaName="btc_davnoofstructuralanchorsatn1furthesttof"/>
+        <DetailItem SchemaName="btc_anchorsysteminmasonrybeneathwindoworparapet"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="4">

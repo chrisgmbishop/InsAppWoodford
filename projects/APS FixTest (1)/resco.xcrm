@@ -430,11 +430,16 @@
     </entity>
     <entity schema="msdyn_customerasset" haslabels="true" xattr="2097152">
       <properties>
+        <property schema="btc_anchorsysteminmasonrybeneathwindoworparapet"/>
         <property schema="btc_aresacrificialpadsrequired"/>
+        <property schema="btc_aretheredrings2"/>
         <property schema="btc_aretheregatesfittedtothesystem"/>
+        <property schema="btc_aretherehiddenorweatherproofedfixings"/>
         <property schema="btc_aretoeboardspresentonsystem"/>
         <property schema="btc_assetsource"/>
         <property schema="btc_assetwebsite" displayformat="Barcode"/>
+        <property schema="btc_baseplatepostbasedimensionsmm"/>
+        <property schema="btc_baseplatepostbasedimensionswmm"/>
         <property schema="btc_brandproductname"/>
         <property schema="btc_cablematerial"/>
         <property schema="btc_cablespecification"/>
@@ -461,6 +466,7 @@
         <property schema="btc_davlengthh"/>
         <property schema="btc_davlengthl"/>
         <property schema="btc_davmaterialspecification"/>
+        <property schema="btc_davnoofstructuralanchorsatn1furthesttof"/>
         <property schema="btc_davnumberofanchordevices"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
@@ -578,6 +584,7 @@
         <property schema="btc_standardsselectionhll"/>
         <property schema="btc_structuralconfiguration"/>
         <property schema="btc_systembrand"/>
+        <property schema="btc_teststandard"/>
         <property schema="btc_totallengthofsystemm"/>
         <property schema="btc_totalnoofstructuralanchors"/>
         <property schema="btc_travellercategoryofuse"/>
@@ -595,6 +602,11 @@
         <property schema="msdyn_functionallocation"/>
       </properties>
       <indexes>
+        <index schema="idx_msdyn_customerasset_btc_teststandard" issystem="true">
+          <fields>
+            <field schema="btc_teststandard"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_msdyn_account" issystem="true">
           <fields>
             <field schema="msdyn_account"/>
@@ -1801,6 +1813,7 @@
         <property schema="resco_label"/>
         <property schema="resco_layout"/>
         <property schema="resco_localization"/>
+        <property schema="resco_mapping"/>
         <property schema="resco_max"/>
         <property schema="resco_min"/>
         <property schema="resco_name"/>
