@@ -4,4 +4,5 @@ ProductSubTitle=
 PoweredBy=Powered by Resco
 Icon=Logo.png
 Website=https://dynamics.microsoft.com/
-SupportEmail=cbishop@keesafetytechnical.com
+SupportEmail=cbishop@keesafety.com
+SupportEmailSignature=aXNOopLgeR42TKGpf1PokGNgdlWGJ3xMI4pcv08JyY31fD+dfsycUGVp/lY+/rnGqo2CCSilnzc0V6e2uoqZfuvf9zMuP/qEi9QfV3N6OaIWRyeLN/uqVGp7awMtoPx+0BubNsTcNcFO+PdUk4WEYcpkOyxN489c4bgqWvXFvqY=

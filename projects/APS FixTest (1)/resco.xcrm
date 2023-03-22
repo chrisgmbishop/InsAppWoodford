@@ -1090,7 +1090,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_workorderincident" haslabels="true">
+    <entity schema="msdyn_workorderincident" haslabels="true" xattr="2097152">
       <properties>
         <property schema="btc_inspectionstatus"/>
         <property schema="btc_serviceaccount"/>
