@@ -31,6 +31,7 @@
         <DetailItem SchemaName="btc_detailedlocation"/>
         <DetailItem SchemaName="msdyn_account"/>
         <DetailItem SchemaName="msdyn_customerassetcategory"/>
+        <DetailItem SchemaName="btc_teststandard"/>
         <DetailItem SchemaName="btc_lastinspected"/>
         <DetailItem SchemaName="btc_installdate"/>
         <DetailItem SchemaName="btc_assetwebsite"/>
@@ -39,7 +40,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>EB Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardsselectioneyebolts"/>
         <DetailItem SchemaName="btc_brandproductname"/>
         <DetailItem SchemaName="btc_specifybrand"/>
         <DetailItem SchemaName="btc_numberofeyebolts"/>
@@ -62,7 +62,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>CL Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardsselectioncatladders"/>
         <DetailItem SchemaName="btc_clbasematerial"/>
         <DetailItem SchemaName="btc_clmaterialspecification"/>
         <DetailItem SchemaName="btc_clothermaterial"/>
@@ -83,7 +82,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>GA Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardselectiondwa"/>
         <DetailItem SchemaName="btc_numberofdeadweightanchors"/>
         <DetailItem SchemaName="btc_useofsystem"/>
         <DetailItem SchemaName="btc_maxofusers"/>
@@ -100,7 +98,6 @@
     <FormTab xsi:type="DetailTab" FlexiExpandVisibility="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>HLL Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardsselectionhll"/>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
         <DetailItem SchemaName="btc_systembrand"/>
         <DetailItem SchemaName="btc_specifybrand"/>
@@ -120,7 +117,6 @@
     <FormTab xsi:type="DetailTab" flexiHeight="4" FlexiExpandVisibility="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>FSGR Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardsselectionfsgr"/>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
         <DetailItem SchemaName="btc_whattypeofmembranesurfaceinstalledon"/>
         <DetailItem SchemaName="btc_othermembranesurface"/>
@@ -191,7 +187,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>OT Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardsselectioneyebolts"/>
         <DetailItem SchemaName="btc_fixturemethodtype"/>
         <DetailItem SchemaName="btc_otinstallationbeentestedcalcedanswer"/>
         <DetailItem SchemaName="btc_otsecondaryfixinghasbeenusedans"/>
@@ -202,7 +197,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>VLL Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_vllstandards"/>
         <DetailItem SchemaName="btc_fixturemethodtype"/>
         <DetailItem SchemaName="btc_otinstallationbeentestedcalcedanswer"/>
         <DetailItem SchemaName="btc_otsecondaryfixinghasbeenusedans"/>
@@ -213,7 +207,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>VTS Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_vllstandards"/>
         <DetailItem SchemaName="btc_clfixingmethodtype"/>
         <DetailItem SchemaName="btc_totallengthofsystemm"/>
         <DetailItem SchemaName="btc_useofsystem"/>
@@ -223,14 +216,11 @@
     </FormTab>
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>MVF Information</Name>
-      <SerializedChildren>
-        <DetailItem SchemaName="btc_mvfstandards"/>
-      </SerializedChildren>
+      <SerializedChildren/>
     </FormTab>
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RAP Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_rapstandard"/>
         <DetailItem SchemaName="btc_ebcategoryofuse"/>
         <DetailItem SchemaName="btc_rapmethodoffixing"/>
         <DetailItem SchemaName="btc_rapbasepurlinmaterial"/>
@@ -241,7 +231,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RLC Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_rlcstandards"/>
         <DetailItem SchemaName="btc_rlcfixturetype"/>
         <DetailItem SchemaName="btc_rlcwidth"/>
         <DetailItem SchemaName="btc_rlclength"/>
@@ -250,7 +239,6 @@
     <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
       <Name>RAPD Information</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="btc_standardselectiondavits"/>
         <DetailItem SchemaName="btc_otherbrand"/>
         <DetailItem SchemaName="btc_maxofusers"/>
         <DetailItem SchemaName="btc_maxuserweight"/>
