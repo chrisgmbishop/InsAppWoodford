@@ -1,0 +1,51 @@
+﻿<EntityListCollection>
+  <EntityName/>
+  <TypeName>MobileCrm.Controllers.HomeItem</TypeName>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <EntityName/>
+        <TypeName>MobileCrm.Controllers.HomeItem</TypeName>
+        <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+      </Attributes>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <AutoWideWidth>0</AutoWideWidth>
+      <OrderBy/>
+      <SerializedBindings>
+        <string>Form</string>
+        <string>Icon</string>
+        <string>IsSpecial</string>
+        <string>Name</string>
+        <string>SubTitle</string>
+        <string>Title</string>
+      </SerializedBindings>
+      <MaxColumns>0</MaxColumns>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>320</DesignWidth>
+          <DesignHeight>48</DesignHeight>
+          <Name>Default</Name>
+          <Width>320</Width>
+          <Height>68</Height>
+          <SerializedChildren>
+            <CellTemplate SchemaName="Icon">
+              <StyleName>ImageCellStyle</StyleName>
+              <Bounds>16,10,48,48</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>5</Anchor>
+            </CellTemplate>
+            <CellTemplate SchemaName="Title">
+              <StyleName>primary</StyleName>
+              <Bounds>76,21,233,28</Bounds>
+              <CellKind>0</CellKind>
+              <Anchor>13</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties/>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>
