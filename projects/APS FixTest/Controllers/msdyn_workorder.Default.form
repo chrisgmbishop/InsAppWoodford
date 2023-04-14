@@ -1,0 +1,401 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_workorder</EntityName>
+  <CamelCase>msdyn_workorder</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.now&lt;/var&gt;&lt;func&gt;SetToday&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_name.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Incidents.IsExpanded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="setup field for new record" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.IsNew&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_systemstatus.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="setup msdyn_name" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_name&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.msdyn_name.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Hide CAs if PA is not complete" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_functionallocation.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_functionallocation.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Set styles for RAMS button onLoad" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Set styles for PA button onLoad" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Show extra works button" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_extraworkspreapproved&lt;/var&gt;&lt;op&gt;NotEqual&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Extra works.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^Extra works.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="If Tech is self-signing" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_solotechnician&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.btc_signedby.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.btc_solotechnician&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.btc_signedby.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;IsLoaded&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsLoaded&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;alertDifferentCurrencyBillingAccount&lt;/var&gt;
+      &lt;arg&gt;String:@Alert.DifferentCurrencyBillingAccount&lt;/arg&gt;
+      &lt;arg&gt;var:Configuration.language&lt;/arg&gt;
+      &lt;func&gt;FormatSingle&lt;/func&gt;
+      &lt;type&gt;String&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;alertDifferentCurrencyPriceList&lt;/var&gt;
+      &lt;arg&gt;String:@Alert.DifferentCurrencyPriceList&lt;/arg&gt;
+      &lt;arg&gt;var:Configuration.language&lt;/arg&gt;
+      &lt;func&gt;FormatSingle&lt;/func&gt;
+      &lt;type&gt;String&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="Validate that the work order currency matches the billing account currency" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.msdyn_billingaccount&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;definition e="false"&gt;
+            &lt;var&gt;workOrderBillingAccount&lt;/var&gt;
+            &lt;arg&gt;var:Entity.msdyn_billingaccount&lt;/arg&gt;
+            &lt;arg&gt;String:account&lt;/arg&gt;
+            &lt;func&gt;LoadReference&lt;/func&gt;
+            &lt;type&gt;Entity&lt;/type&gt;
+          &lt;/definition&gt;
+          &lt;branch info="If WorkOrderBillingAccount contains data" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="true"&gt;
+                  &lt;var&gt;workOrderBillingAccount.@this&lt;/var&gt;
+                  &lt;op&gt;ContainsData&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;branch info="If TransactionCurrencyId does not equal to WorkOrderBillingAccount's TransactionCurrencyId" e="true"&gt;
+                  &lt;if e="true"&gt;
+                    &lt;conditions e="true" op="And"&gt;
+                      &lt;condition e="false"&gt;
+                        &lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;
+                        &lt;arg&gt;var:workOrderBillingAccount.transactioncurrencyid&lt;/arg&gt;
+                        &lt;op&gt;NotEqual&lt;/op&gt;
+                      &lt;/condition&gt;
+                    &lt;/conditions&gt;
+                    &lt;action e="true"&gt;
+                      &lt;function e="false"&gt;
+                        &lt;var&gt;ErrorMessage&lt;/var&gt;
+                        &lt;arg&gt;var:alertDifferentCurrencyBillingAccount&lt;/arg&gt;
+                        &lt;func&gt;Assign&lt;/func&gt;
+                      &lt;/function&gt;
+                    &lt;/action&gt;
+                  &lt;/if&gt;
+                &lt;/branch&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;branch info="Validate that the work order currency matches the price list currency" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.msdyn_pricelist&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;definition e="false"&gt;
+            &lt;var&gt;workOrderPriceList&lt;/var&gt;
+            &lt;arg&gt;var:Entity.msdyn_pricelist&lt;/arg&gt;
+            &lt;arg&gt;String:pricelevel&lt;/arg&gt;
+            &lt;func&gt;LoadReference&lt;/func&gt;
+            &lt;type&gt;Entity&lt;/type&gt;
+          &lt;/definition&gt;
+          &lt;branch info="If WorkOrderPriceList contains data" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;workOrderPriceList.@this&lt;/var&gt;
+                  &lt;op&gt;ContainsData&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;branch info="If TransactionCurrencyId does not equal to WorkOrderPriceList's TransactionCurrencyId" e="true"&gt;
+                  &lt;if e="true"&gt;
+                    &lt;conditions e="true" op="And"&gt;
+                      &lt;condition e="false"&gt;
+                        &lt;var&gt;Entity.transactioncurrencyid&lt;/var&gt;
+                        &lt;arg&gt;var:workOrderPriceList.transactioncurrencyid&lt;/arg&gt;
+                        &lt;op&gt;NotEqual&lt;/op&gt;
+                      &lt;/condition&gt;
+                    &lt;/conditions&gt;
+                    &lt;action e="true"&gt;
+                      &lt;function e="false"&gt;
+                        &lt;var&gt;ErrorMessage&lt;/var&gt;
+                        &lt;arg&gt;var:alertDifferentCurrencyPriceList&lt;/arg&gt;
+                        &lt;func&gt;Assign&lt;/func&gt;
+                      &lt;/function&gt;
+                    &lt;/action&gt;
+                  &lt;/if&gt;
+                &lt;/branch&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;customerAsset&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_customerasset&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_customerasset&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If CustomerAsset and ServiceAccount contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;customerAsset.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Entity.msdyn_serviceaccount&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If CustomerAsset's Account does not equal to WorkOrder's ServiceAccount" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;customerAsset.msdyn_account&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.msdyn_serviceaccount&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.CustomerAssetMustBeRelatedToServiceAccountOfWorkOrder&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_customerasset&lt;/var&gt;
+                  &lt;func&gt;Clear&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+    &lt;branch info="If ParentWorkOrder contains data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;condition e="false"&gt;
+            &lt;var&gt;Entity.msdyn_parentworkorder&lt;/var&gt;
+            &lt;op&gt;ContainsData&lt;/op&gt;
+          &lt;/condition&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If ParentWorkOrder does not equal to current WorkOrder" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;Entity.msdyn_parentworkorder&lt;/var&gt;
+                  &lt;arg&gt;var:Entity.@this&lt;/arg&gt;
+                  &lt;op&gt;Equal&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.WorkOrderCannotBeAssociatedToItself&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowSave>
+  <WorkflowCommandCanExecute>&lt;?xml version="1.0"?&gt;
+    &lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;
+      &lt;branch e="true" info="Enable or Disable IoT Commands"&gt;
+        &lt;if e="true"&gt;
+          &lt;conditions e="true" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;Command.Name&lt;/var&gt;
+              &lt;op&gt;Equal&lt;/op&gt;
+              &lt;arg&gt;String:custom_SendIoTCommand&lt;/arg&gt;
+            &lt;/condition&gt;
+          &lt;/conditions&gt;
+          &lt;action&gt;
+            &lt;branch e="true" info=""&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                  &lt;condition e="false"&gt;
+                    &lt;var&gt;Entity.IsNew&lt;/var&gt;
+                    &lt;op&gt;Equal&lt;/op&gt;
+                    &lt;arg&gt;Boolean:True&lt;/arg&gt;
+                  &lt;/condition&gt;
+                &lt;/conditions&gt;
+                &lt;action&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                    &lt;arg&gt;Boolean:False&lt;/arg&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+              &lt;if e="true"&gt;
+                &lt;conditions e="true" op="And"&gt;
+                &lt;/conditions&gt;
+                &lt;action&gt;
+                  &lt;function e="false"&gt;
+                    &lt;var&gt;Command.IsEnabled&lt;/var&gt;
+                    &lt;func&gt;Assign&lt;/func&gt;
+                    &lt;arg&gt;var:Shared.custom_SendIoTCommandEnabled&lt;/arg&gt;
+                  &lt;/function&gt;
+                &lt;/action&gt;
+              &lt;/if&gt;
+            &lt;/branch&gt;
+          &lt;/action&gt;
+        &lt;/if&gt;
+      &lt;/branch&gt;
+    &lt;/Workflow&gt;
+  </WorkflowCommandCanExecute>
+  <WorkflowButtonCommand>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;amt&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;type&gt;Integer&lt;/type&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;amt&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.btc_preapprovalamount&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="If RAMS buttons are pressed" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:RAMSyes&lt;/arg&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsMaximized&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:RAMSno&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;saytext e="false"&gt;&lt;var&gt;&lt;/var&gt;&lt;text&gt;Please contact your line manager and do not proceed with any works&lt;/text&gt;&lt;/saytext&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.btc_ramssigned&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:0&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.POWERApp double tap to expand.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.-Have you completed the POWERApp?.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^RAMSyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="If PA buttons pressed" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:POWERAppyes&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_functionallocation.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.btc_powerappdone&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:1&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:POWERAppno&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_customerasset.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.(msdyn_functionallocation.@virtual.msdyn_workorder).IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:activated&lt;/arg&gt;&lt;/function&gt;&lt;saytext e="false"&gt;&lt;var&gt;&lt;/var&gt;&lt;text&gt;Please complete POWERApp before beginning Inspections&lt;/text&gt;&lt;/saytext&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppyes.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.^POWERAppno.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Left Style&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="If approval is pressed" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Extra works&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;saytext e="false"&gt;&lt;var&gt;amt&lt;/var&gt;&lt;text&gt;Works approved for up to £&lt;/text&gt;&lt;/saytext&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowButtonCommand>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;isBillingAccountTaxExempt&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;isWOTypeTaxable&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;custom_SendIoTCommandEnabled&lt;/Name&gt;&lt;CrmType&gt;Boolean&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="OnLoadEnabled"&gt;&lt;Name&gt;now&lt;/Name&gt;&lt;CrmType&gt;DateTime&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;SharedVariable usage="None"&gt;&lt;Name&gt;startDate&lt;/Name&gt;&lt;CrmType&gt;DateTime&lt;/CrmType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <PrimaryCommands>custom_FollowUp|Cmd.RunFollowUp|</PrimaryCommands>
+  <SharedVariableNames>
+    <string>isBillingAccountTaxExempt</string>
+    <string>isWOTypeTaxable</string>
+    <string>custom_SendIoTCommandEnabled</string>
+    <string>now</string>
+    <string>startDate</string>
+  </SharedVariableNames>
+  <ClassBinding>
+    <SerializedClassBinding name="#BillingAccount" label="BillingAccount" type="String"/>
+    <SerializedClassBinding name="#IsSignatureChange" label="IsSignatureChange" type="String"/>
+    <SerializedClassBinding name="#IsSignatureIsDirty" label="IsSignatureIsDirty" type="String"/>
+    <SerializedClassBinding name="#IsSignatureIsEmpty" label="IsSignatureIsEmpty" type="String"/>
+    <SerializedClassBinding name="#IsSignatureOutdate" label="IsSignatureOutdate" type="String"/>
+    <SerializedClassBinding name="#IsWasSyncAfterCreate" label="IsWasSyncAfterCreate" type="String"/>
+    <SerializedClassBinding name="#PriceList" label="PriceList" type="String"/>
+    <SerializedClassBinding name="#PrimaryIncident" label="PrimaryIncident" type="String"/>
+    <SerializedClassBinding name="#PrimaryIncidentType" label="PrimaryIncidentType" type="String"/>
+    <SerializedClassBinding name="#PropertiesCount" label="PropertiesCount" type="String"/>
+    <SerializedClassBinding name="#ServiceAccount" label="ServiceAccount" type="String"/>
+    <SerializedClassBinding name="#Signature" label="Signature" type="String"/>
+    <SerializedClassBinding name="#SubStatus" label="SubStatus" type="String"/>
+    <SerializedClassBinding name="#WorkOrderType" label="WorkOrderType" type="String"/>
+  </ClassBinding>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <AutoGridColumns>2</AutoGridColumns>
+      <SerializedChildren>
+        <DetailItem SchemaName="Extra works" button="true" buttonLabel="Preapproval Exists" buttonClickText="Preapproval Exists" buttonCommand="" Style="Notice1">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_name"/>
+        <DetailItem SchemaName="msdyn_serviceaccount"/>
+        <DetailItem SchemaName="msdyn_reportedbycontact"/>
+        <DetailItem SchemaName="msdyn_systemstatus"/>
+        <DetailItem SchemaName="msdyn_workordersummary"/>
+        <DetailItem SchemaName="msdyn_instructions"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="Can you confirm you are in receipt of RAMS and have read and understood?" separator="true" xsi:type="SeparatorDetailItem" Style="SpacerQ">
+          <IsConstant>true</IsConstant>
+          <AutoGridLayout>1</AutoGridLayout>
+        </DetailItem>
+        <DetailItem SchemaName="$Table1" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="RAMSno" button="true" buttonLabel="RAMS No" buttonClickText="No" buttonCommand="" Style="Left Style">
+              <IsConstant>true</IsConstant>
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="RAMSyes" button="true" buttonLabel="RAMS Yes" buttonClickText="Yes" buttonCommand="" Style="Left Style">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+        <DetailItem SchemaName="Have you completed the POWERApp?" separator="true" xsi:type="SeparatorDetailItem" Style="SpacerQ">
+          <IsConstant>true</IsConstant>
+          <AutoGridLayout>1</AutoGridLayout>
+        </DetailItem>
+        <DetailItem SchemaName="$Table2" grid="true">
+          <Columns>*;*</Columns>
+          <Rows>Auto</Rows>
+          <Items>
+            <DetailItem SchemaName="POWERAppyes" button="true" buttonLabel="PA Yes" buttonClickText="Yes" buttonCommand="" Style="Left Style">
+              <IsConstant>true</IsConstant>
+              <GridPosition>0;0;1;1</GridPosition>
+            </DetailItem>
+            <DetailItem SchemaName="POWERAppno" button="true" buttonLabel="PA No" buttonClickText="No" buttonCommand="" Style="Left Style">
+              <IsConstant>true</IsConstant>
+              <GridPosition>1;0;1;1</GridPosition>
+            </DetailItem>
+          </Items>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="8">
+      <Name>Customer Assets List (*)</Name>
+      <Binding SchemaName="msdyn_customerasset.@virtual"/>
+      <Views>&lt;extra&gt;&lt;views&gt;msdyn_customerasset.FilterView&lt;/views&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="msdyn_workorderincident" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner" alias="L0"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorder" operator="eq" value="{{msdyn_workorderid}}" /&amp;gt;&amp;lt;condition attribute="statecode" operator="eq" value="0" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L2"&amp;gt;&amp;lt;link-entity name="bookableresourcebooking" from="msdyn_workorder" to="msdyn_workorderid" link-type="inner" alias="L3"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="bookingstatus" operator="eq" value="53f39908-d08a-4d9c-90e8-907fd7bec07d" uitype="bookingstatus" uiname="In Progress" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>msdyn_customerasset.FilterView</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0" FlipMode="224" ListCommands="9">
+      <Name>Functional Locations List (*)</Name>
+      <Binding SchemaName="msdyn_functionallocation.@virtual"/>
+      <Views>&lt;extra&gt;&lt;filter entity="msdyn_functionallocation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_functionallocation"&amp;gt;&amp;lt;link-entity name="msdyn_customerasset" alias="L0" from="msdyn_functionallocation" to="msdyn_functionallocationid" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorderincident" alias="L1" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L2" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+      <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_functionallocation"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_functionallocation"&amp;gt;&amp;lt;link-entity name="msdyn_customerasset" alias="L0" from="msdyn_functionallocation" to="msdyn_functionallocationid" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorderincident" alias="L1" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L2" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{msdyn_workorderid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>POWERApp double tap to expand</Name>
+      <Url>https://keesafety.app/power/</Url>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>WorkOrder</Name>
+      <Url>file://WorkOrder/WorkOrder.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>msdyn_latitude;msdyn_longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Address@2x.png" IsIconNameReadOnly="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_address1"/>
+        <DetailItem SchemaName="msdyn_address2"/>
+        <DetailItem SchemaName="msdyn_address3"/>
+        <DetailItem SchemaName="msdyn_city"/>
+        <DetailItem SchemaName="msdyn_stateorprovince"/>
+        <DetailItem SchemaName="msdyn_postalcode"/>
+        <DetailItem SchemaName="msdyn_country"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" NameModified="1" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Client Name or Self Sign</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="btc_solotechnician"/>
+        <DetailItem SchemaName="btc_signedby"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="SignatureTab" flexiHeight="1" flexiCollapsed="1" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Client Signature</Name>
+      <Flags>0</Flags>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\resco_sharepointdoc@2x.png" IsIconNameReadOnly="0" FlipMode="224" ListCommands="9" AllowAddExisting="true">
+      <Name>Cloud Documents List</Name>
+      <Binding SchemaName="resco_sharepointdoc.resco_regardingid"/>
+      <LookupViews>resco_sharepointdoc.*:resco_sharepointdoc.@Default</LookupViews>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="3" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0" DocCommands="0">
+      <Name>Incidents</Name>
+      <CustomName>Incidents</CustomName>
+      <Binding SchemaName="msdyn_workorderincident.msdyn_workorder"/>
+      <Views>&lt;extra&gt;&lt;views&gt;msdyn_workorderincident.DetailedIncidentList&lt;/views&gt;&lt;filter entity="msdyn_workorderincident"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_workorderincident"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="statecode" operator="eq" value="0"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</Views>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>
