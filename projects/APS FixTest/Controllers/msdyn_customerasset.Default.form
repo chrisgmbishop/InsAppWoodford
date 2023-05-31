@@ -31,7 +31,10 @@
         <DetailItem SchemaName="btc_detailedlocation"/>
         <DetailItem SchemaName="msdyn_account"/>
         <DetailItem SchemaName="msdyn_customerassetcategory"/>
-        <DetailItem SchemaName="btc_teststandard"/>
+        <DetailItem SchemaName="btc_teststandard">
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="btc_prodnamebrand"/>
         <DetailItem SchemaName="btc_lastinspected"/>
         <DetailItem SchemaName="btc_installdate"/>
         <DetailItem SchemaName="btc_assetwebsite"/>
