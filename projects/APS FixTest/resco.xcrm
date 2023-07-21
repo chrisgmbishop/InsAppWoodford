@@ -275,6 +275,27 @@
         </index>
       </indexes>
     </entity>
+    <entity schema="btc_productnamebrand" permissions="512" xattr="512">
+      <properties>
+        <property schema="btc_customerassetcategory"/>
+        <property schema="btc_name"/>
+        <property schema="btc_productnamebrandid"/>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+      </properties>
+      <indexes>
+        <index schema="idx_btc_productnamebrand_btc_customerassetcategory" issystem="true">
+          <fields>
+            <field schema="btc_customerassetcategory"/>
+          </fields>
+        </index>
+        <index schema="idx_btc_productnamebrand_btc_name" issystem="true">
+          <fields>
+            <field schema="btc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
     <entity schema="btc_teststandard" permissions="768" xattr="768">
       <properties>
         <property schema="btc_name"/>
@@ -443,13 +464,18 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="msdyn_customerasset" haslabels="true" xattr="2097152">
+    <entity schema="msdyn_customerasset" permissions="512" haslabels="true" xattr="2097664">
       <properties>
+        <property schema="btc_anchorsysteminmasonrybeneathwindoworparapet"/>
         <property schema="btc_aresacrificialpadsrequired"/>
+        <property schema="btc_aretheredrings2"/>
         <property schema="btc_aretheregatesfittedtothesystem"/>
+        <property schema="btc_aretherehiddenorweatherproofedfixings"/>
         <property schema="btc_aretoeboardspresentonsystem"/>
         <property schema="btc_assetsource"/>
         <property schema="btc_assetwebsite" displayformat="Barcode"/>
+        <property schema="btc_baseplatepostbasedimensionsmm"/>
+        <property schema="btc_baseplatepostbasedimensionswmm"/>
         <property schema="btc_brandproductname"/>
         <property schema="btc_cablematerial"/>
         <property schema="btc_cablespecification"/>
@@ -476,8 +502,8 @@
         <property schema="btc_davlengthh"/>
         <property schema="btc_davlengthl"/>
         <property schema="btc_davmaterialspecification"/>
+        <property schema="btc_davnoofstructuralanchorsatn1furthesttof"/>
         <property schema="btc_davnumberofanchordevices"/>
-        <property schema="btc_davremovabledavitarm"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
         <property schema="btc_dwaanchordeviceieeyeboltdemountable"/>
@@ -550,6 +576,7 @@
         <property schema="btc_ppeproductcode"/>
         <property schema="btc_ppeproductdescription"/>
         <property schema="btc_ppetype"/>
+        <property schema="btc_prodnamebrand"/>
         <property schema="btc_raapplication"/>
         <property schema="btc_rabrandproductname"/>
         <property schema="btc_racladdingmaterial"/>
@@ -596,8 +623,11 @@
         <property schema="btc_systembrand"/>
         <property schema="btc_teststandard"/>
         <property schema="btc_totallengthofsystemm"/>
+        <property schema="btc_totalnoofstructuralanchors"/>
         <property schema="btc_travellercategoryofuse"/>
         <property schema="btc_travellerperishableelementsenergyabsorber"/>
+        <property schema="btc_travellertype"/>
+        <property schema="btc_typeofanchor"/>
         <property schema="btc_typeofuse"/>
         <property schema="btc_useofsystem"/>
         <property schema="btc_vllstandards"/>
@@ -609,6 +639,11 @@
         <property schema="msdyn_functionallocation"/>
       </properties>
       <indexes>
+        <index schema="idx_msdyn_customerasset_btc_prodnamebrand" issystem="true">
+          <fields>
+            <field schema="btc_prodnamebrand"/>
+          </fields>
+        </index>
         <index schema="idx_msdyn_customerasset_btc_teststandard" issystem="true">
           <fields>
             <field schema="btc_teststandard"/>

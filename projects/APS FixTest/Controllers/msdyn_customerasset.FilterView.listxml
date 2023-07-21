@@ -7,9 +7,10 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_customerassetcategory</OrderBy>
-  <SortAllowedFields>btc_existingasset;createdon;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
-  <FilterAllowedFields>msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
+  <SortAllowedFields>btc_existingasset;createdon;msdyn_account;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
+  <FilterAllowedFields>msdyn_account;msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
   <SerializedBindings>
+    <string>msdyn_account</string>
     <string>btc_assetwebsite</string>
     <string>msdyn_customerassetcategory</string>
     <string>msdyn_customerassetid</string>
@@ -22,43 +23,53 @@
       <filter type="and">
         <condition attribute="statuscode" operator="eq" value="962630003"/>
       </filter>
-      <link-entity name="msdyn_workorderincident" alias="L0" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner">
+      <link-entity name="msdyn_workorderincident" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner" alias="L0">
         <filter type="and">
-          <condition attribute="statecode" operator="eq" value="0"/>
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0"/>
+            <condition attribute="msdyn_incidentresolved" operator="eq" value="0"/>
+          </filter>
         </filter>
-        <link-entity name="msdyn_workorder" alias="L1" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner"/>
+        <link-entity name="msdyn_workorder" from="msdyn_workorderid" to="msdyn_workorder" link-type="inner" alias="L1"/>
       </link-entity>
     </entity>
   </Fetch>
   <Search>
     <attribute schema="msdyn_name" method="Contains"/>
     <attribute schema="msdyn_functionallocation" method="Contains" reference="true"/>
+    <attribute schema="msdyn_account" method="Contains" reference="true"/>
   </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>275</Width>
-      <Height>48</Height>
+      <Width>320</Width>
+      <Height>64</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="msdyn_name">
           <StyleName>primary</StyleName>
-          <Bounds>10,2,246,28</Bounds>
+          <Bounds>17,14,150,27</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_customerassetcategory">
           <StyleName>gray</StyleName>
-          <Bounds>10,30,120,14</Bounds>
+          <Bounds>17,40,152,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="msdyn_functionallocation">
-          <StyleName>gray</StyleName>
-          <Bounds>130,30,126,14</Bounds>
+          <StyleName>r_gray</StyleName>
+          <Bounds>169,40,144,14</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>5</Anchor>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_account">
+          <StyleName>primary</StyleName>
+          <Bounds>166,14,147,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
