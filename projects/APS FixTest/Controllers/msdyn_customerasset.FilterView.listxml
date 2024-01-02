@@ -90,7 +90,7 @@
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="btc_serialno">
-          <StyleName>gray</StyleName>
+          <StyleName>r_gray</StyleName>
           <Bounds>130,30,126,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
