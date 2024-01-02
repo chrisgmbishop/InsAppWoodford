@@ -18,6 +18,9 @@
     <string>msdyn_name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="msdyn_account" method="Contains" reference="true"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>

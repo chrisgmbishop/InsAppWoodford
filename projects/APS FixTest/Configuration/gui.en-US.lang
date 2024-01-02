@@ -306,3 +306,4 @@ Alert.YouAreTheCrewLeader=You are the crew leader for this booking. Your changes
 Alert.YouAreACrewMember=You are a crew member for this booking. Certain fields have been made read-only as your crew leader will manage them for you.
 Alert.GetAuthUrlFromRedirect=Host {0} is unreachable
 msdyn_workorder.null=Extra works are pre-approved
+msdyn_workorder.DetailView.Inspected Assets=Inspected Assets (*)

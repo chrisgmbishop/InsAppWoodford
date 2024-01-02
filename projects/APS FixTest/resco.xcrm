@@ -506,6 +506,7 @@
         <property schema="btc_davnumberofanchordevices"/>
         <property schema="btc_detailedlocation"/>
         <property schema="btc_dmarcsystembrand"/>
+        <property schema="btc_dothegravityanchorsincorporateananchor"/>
         <property schema="btc_dwaanchordeviceieeyeboltdemountable"/>
         <property schema="btc_dwaanchorsystemincorporateasystempost"/>
         <property schema="btc_dwaarewaterfilledgravityanchorsused"/>
@@ -529,6 +530,10 @@
         <property schema="btc_fixturemethodtype"/>
         <property schema="btc_fixturetype"/>
         <property schema="btc_frequencyofinspection"/>
+        <property schema="btc_frlcframematerial"/>
+        <property schema="btc_frlcinfillpanelmaterial"/>
+        <property schema="btc_frlcinfillpaneltype"/>
+        <property schema="btc_frlcleveltype"/>
         <property schema="btc_fsgrsystembrand"/>
         <property schema="btc_hllarebearerbarspresentwithbaseplates"/>
         <property schema="btc_hllareentryterminalsendstopspresent"/>

@@ -3,7 +3,7 @@
     <EntityName>msdyn_customerasset</EntityName>
     <CamelCase>msdyn_customerasset</CamelCase>
   </Attributes>
-  <Name>FilterView</Name>
+  <Name>Inspected Assets</Name>
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>msdyn_customerassetcategory</OrderBy>
@@ -17,14 +17,18 @@
     <string>msdyn_functionallocation</string>
     <string>msdyn_name</string>
     <string>btc_ppetype</string>
-    <string>btc_serialno</string>
+    <string>statecode</string>
+    <string>statuscode</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_customerassetcategory&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_customerassetcategory,56478f5a-e753-ea11-a813-00224801ce17,PPE&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
+  <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Show PPE row" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.msdyn_customerassetcategory&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Lookup:msdyn_customerassetcategory,56478f5a-e753-ea11-a813-00224801ce17,PPE&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:1&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;TemplateIndex&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <Fetch version="1.0">
     <entity name="msdyn_customerasset">
       <filter type="and">
-        <condition attribute="statuscode" operator="eq" value="962630003"/>
+        <condition attribute="statuscode" operator="not-in">
+          <value>2</value>
+          <value>962630003</value>
+        </condition>
       </filter>
       <link-entity name="msdyn_workorderincident" from="msdyn_customerasset" to="msdyn_customerassetid" link-type="inner" alias="L0">
         <filter type="and">
@@ -62,7 +66,7 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="msdyn_functionallocation">
+        <CellTemplate SchemaName="statuscode">
           <StyleName>gray</StyleName>
           <Bounds>130,30,126,14</Bounds>
           <CellKind>0</CellKind>
@@ -89,17 +93,17 @@
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
-        <CellTemplate SchemaName="btc_serialno">
+        <CellTemplate SchemaName="statuscode">
           <StyleName>gray</StyleName>
           <Bounds>130,30,126,14</Bounds>
           <CellKind>0</CellKind>
           <Anchor>5</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="btc_ppetype">
-          <StyleName>r_primary9</StyleName>
+          <StyleName>r_primary</StyleName>
           <Bounds>130,2,125,28</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>9</Anchor>
+          <Anchor>5</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
