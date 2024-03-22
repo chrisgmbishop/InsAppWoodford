@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Empty Offline HTML homepage</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+	<script src="../JSBridge.js"></script>
+</head>
+<body>
+	<script>
+
+        class HomeEventHandler {
+            constructor() {
+                /** Simple object representation */
+                this._globalVariable = { value : "Default value" };
+            }
+            get globalVariable() {
+                return this._globalVariable;
+            }
+            set globalVariable(obj) {
+                this._globalVariable = obj;
+                // value has changed, so notify the handlers about the change
+                MobileCRM.bridge.raiseGlobalEvent("readGlobalVariable", obj);
+            }
+            onChangeGlobalVariable() {
+                MobileCRM.bridge.onGlobalEvent("onGlobalVariableChange", args => {
+                    if (args.value) { // we expect that args value is the same object as global variable
+                        this.globalVariable = args;
+                    }
+                }, true, null);
+            }
+            onGlobalVariableRequested() {
+                MobileCRM.bridge.onGlobalEvent("requestGlobalVariable", args => {
+                    MobileCRM.bridge.raiseGlobalEvent("readGlobalVariable", this.globalVariable);
+                }, true, null);
+            }
+        }
+
+        window.onload = function () {
+            var eventHandler = new HomeEventHandler();
+            eventHandler.onChangeGlobalVariable();
+            eventHandler.onGlobalVariableRequested();
+        }
+
+	</script>
+</body>
+</html>

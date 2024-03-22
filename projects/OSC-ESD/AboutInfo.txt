@@ -1,0 +1,8 @@
+﻿Manufacturer=Microsoft Corporation
+ProductTitle=Inspections
+ProductSubTitle=
+PoweredBy=Powered by Resco
+Icon=Logo.png
+Website=https://dynamics.microsoft.com/
+SupportEmail=150f5eb5.keesafety.com@uk.teams.ms
+SupportEmailSignature=ghrbUOzX5kENbz7vlO3GZ97eKuN7oOjK6epaCjPWma/4L82jRfUgBEd76pofr59i2CeNypKD39HVruUCwry4DX0Hv8li4AAJsCTW//9KZd4sL0RHWtcRKsSWItHPr3RDkBwz5F9qwhI1DoSOT1ihGmkW/sFcdRw6I7h92AOBxmc=

@@ -1,0 +1,58 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>msdyn_workorderproduct</EntityName>
+    <CamelCase>msdyn_workorderproduct</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>DetailedProductList</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <MultiSelectCommands>Delete|||Merge||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>msdyn_description</string>
+    <string>msdyn_product</string>
+    <string>msdyn_quantity</string>
+    <string>msdyn_totalamount</string>
+    <string>msdyn_workorderproductid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <EnabledMultiSelect>1</EnabledMultiSelect>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>240</DesignWidth>
+      <DesignHeight>40</DesignHeight>
+      <Name>Default</Name>
+      <Width>240</Width>
+      <Height>40</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_product">
+          <StyleName>primary</StyleName>
+          <Bounds>8,3,142,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_totalamount">
+          <StyleName>r_currency</StyleName>
+          <Bounds>150,3,84,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_description">
+          <StyleName>gray</StyleName>
+          <Bounds>8,22,168,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_quantity">
+          <StyleName>r_gray</StyleName>
+          <Bounds>176,22,58,15</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>9</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

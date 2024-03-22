@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Activate IE9 document mode, if available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Defined iOS viewport -->
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../JSBridgeExtension.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script type="text/javascript" src="../Enums.js"></script>
+    <script type="text/javascript" src="../Common.js"></script>
+    <script type="text/javascript" src="BRB.js"></script>
+    <script type="text/javascript" src="TravelingCalculations.js"></script>
+    <script type="text/javascript" src="../WorkOrder/FollowUpWOHelper.js"></script>
+    <script type="text/javascript" src="../RemoteAssist/RemoteAssist.js"></script>
+    <script type="text/javascript" src="../Telemetry.js"></script>
+</head>
+<body onload="FS.BookableResourceBooking.bookableResourceBookingOnLoad()">
+    <script>
+        // entityForm = object
+        function getInProgressGUID() {
+            var inProgressStatus = new MobileCRM.FetchXml.Entity("bookingstatus");
+            var statusGUID;
+            inProgressStatus.addAttributes();
+            var filter = new MobileCRM.FetchXml.Filter();
+            filter.where("name", "eq", "In Progress");
+            inProgressStatus.filter = filter;
+            var fetch = new MobileCRM.FetchXml.Fetch(inProgressStatus);
+            fetch.execute("DynamicEntities",function (res){
+                if(res.length > 0){
+                    statusGUID = res[0].properties.bookingstatusid; // In Progress Status GUID
+                    // get entity
+                    MobileCRM.UI.EntityForm.requestObject(function (entityForm) {
+                        var formProps = entityForm.entity.properties;
+                            formProps.bookingstatus = new MobileCRM.Reference("bookingstatus",statusGUID);
+                            MobileCRM.UI.EntityForm.save();
+                            },
+                            function (err) {
+                                MobileCRM.bridge.alert("An error occurred: " + err);
+                            },null
+                        );
+                    }
+                },function(err){onError("Getting InProgress Code", err);
+            },null);
+        }
+        function getCompletedGUID() {
+            var inProgressStatus = new MobileCRM.FetchXml.Entity("bookingstatus");
+            var statusGUID;
+            inProgressStatus.addAttributes();
+            var filter = new MobileCRM.FetchXml.Filter();
+            filter.where("name", "eq", "Completed");
+            inProgressStatus.filter = filter;
+            var fetch = new MobileCRM.FetchXml.Fetch(inProgressStatus);
+            fetch.execute("DynamicEntities",function (res){
+                if(res.length > 0){
+                    statusGUID = res[0].properties.bookingstatusid; // Completed Status GUID
+                    // get entity
+                    MobileCRM.UI.EntityForm.requestObject(function (entityForm) {
+                        var formProps = entityForm.entity.properties;
+                            formProps.bookingstatus = new MobileCRM.Reference("bookingstatus",statusGUID);
+                            MobileCRM.UI.EntityForm.saveAndClose();
+                            },
+                            function (err) {
+                                MobileCRM.bridge.alert("An error occurred: " + err);
+                            },null
+                        );
+                    }
+                },function(err){onError("Getting InProgress Code", err);
+            },null);
+        }
+    </script>
+</body>
+</html>

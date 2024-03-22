@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Activate IE9 document mode, if available -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ms-https-connections-only" content="true">
+    <!-- Defined iOS viewport -->
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../JSBridge.js"></script>
+    <script type="text/javascript" src="../JSBridgeExtension.js"></script>
+    <script type="text/javascript" src="../Common.js"></script>
+    <script type="text/javascript" src="../Schema.js"></script>
+    <script type="text/javascript" src="../Enums.js"></script>
+    <script type="text/javascript" src="WorkOrder.js"></script>
+    <script type="text/javascript" src="FollowUpWOHelper.js"></script>
+    <script type="text/javascript" src="../IoTUtils/SendCommandHelper.js"></script>
+    <script type="text/javascript" src="../IoTUtils/Utils.js"></script>
+    <script type="text/javascript" src="../RemoteAssist/RemoteAssist.js"></script>
+    <script type="text/javascript" src="../Telemetry.js"></script>
+</head>
+<body onload="FS.WorkOrder.workOrderOnLoad()">
+    <script>
+        function refreshForm(){
+            MobileCRM.UI.EntityForm.refreshForm();
+        }
+        // function saveForm() {
+        //     MobileCRM.UI.EntityForm.save();
+        // }
+        let itemArr = [];
+        function aggItems(data){
+                // let woLineItems = collectLineItems(entityForm);
+                let woLineItems = data;
+                console.log(woLineItems);
+                let aggRes = [];
+                woLineItems.reduce(function(res, value){
+                    if(!res[value.id]){
+                        res[value.id] = {};
+                        aggRes.push(res[value.id])
+                    }
+                    res[value.id].msdyn_quantity += value.msdyn_quantity;
+                    return res;
+                }, {});
+                console.log("test");
+            };
+        function collectLineItems(entityForm){
+            
+            // build fetchXML
+            let fetchEntity = new MobileCRM.FetchXml.Entity("msdyn_workorderproduct");
+            fetchEntity.addAttribute("msdyn_workorderproductid");
+            fetchEntity.addAttribute("msdyn_product");
+            fetchEntity.addAttribute("msdyn_quantity");
+            fetchEntity.addAttribute("msdyn_unitamount");
+            fetchEntity.addAttribute("msdyn_pricelist");
+            fetchEntity.addAttribute("msdyn_workorder");
+            let filter = new MobileCRM.FetchXml.Filter();
+            filter.where("msdyn_workorder", "eq", entityForm.entity.id);
+            fetchEntity.filter = filter;
+            let fetch = new MobileCRM.FetchXml.Fetch(fetchEntity);
+            let aggItems = [];
+            let unit = "d0f854fa-d4b9-4125-8eb3-671a182fdf3e"
+            let total = 0;
+
+            // Fetch all work order line items
+            fetch.executeAsync("DynamicEntities")
+                .then(function(result){
+                    for(let item in result){
+                        itemArr.push(result[item]);
+                    }
+
+                    let woLineItems = [...itemArr];
+                    console.log(itemArr);
+                    let aggRes = [];
+
+                    // Aggregate all Work Order line items with prices, quants, names and prodReferences
+                    woLineItems.reduce(function(next, number){
+                        if(!next[number.properties.msdyn_product.primaryName]){
+                            next[number.properties.msdyn_product.primaryName] = { prodName: number.properties.msdyn_product.primaryName, prodRefId : number.properties.msdyn_product.id, prodPrice : number.properties.msdyn_unitamount, msdyn_quantity: 0, totalPrice : 0 };
+                            aggRes.push(next[number.properties.msdyn_product.primaryName])
+                        }
+                        // Tally Quantities
+                        next[number.properties.msdyn_product.primaryName].msdyn_quantity += number.properties.msdyn_quantity;
+                        
+                        // Adjust totals per product
+                        next[number.properties.msdyn_product.primaryName].totalPrice = next[number.properties.msdyn_product.primaryName].msdyn_quantity * next[number.properties.msdyn_product.primaryName].prodPrice;
+                        return next;
+                    }, {});
+                    console.log(aggRes);
+
+                    let referenceWoId = itemArr[0].properties.msdyn_workorder.id;
+                    let referenceWoName = itemArr[0].properties.msdyn_workorder.entityName;
+                    let referenceUnitId = "d0f854fa-d4b9-4125-8eb3-671a182fdf3e";
+                    let referenceUnitName = "uom";
+                    let referencePriceListId = itemArr[0].properties.msdyn_pricelist.id;
+                    let referencePriceListName = itemArr[0].properties.msdyn_pricelist.entityName;
+                    let refWo, refUnit, refPrice, refProd = null;
+
+                    // Build reference standard reference objects that apply to all items
+                    if (referenceWoId != null) {
+                        refWo = new MobileCRM.Reference(referenceWoName, referenceWoId);
+                    }
+                    if (referenceUnitId != null) {
+                        refUnit = new MobileCRM.Reference(referenceUnitName, referenceUnitId);
+                    }
+                    if (referencePriceListId != null) {
+                        refPrice = new MobileCRM.Reference(referencePriceListName, referencePriceListId);
+                    }
+
+                    // Delete old line items
+                    for (let i in itemArr) {
+                        console.log(itemArr[i].entityName);
+                        console.log(itemArr[i].id);
+                        MobileCRM.DynamicEntity.deleteById(
+                            itemArr[i].entityName,
+                            itemArr[i].id,
+                            function(){
+                            },
+                            function (err){
+                                MobileCRM.bridge.alert("An error occurred: " + err);
+                            }
+                        )
+                    }
+
+                    // Create new line items
+                    for(let i in aggRes){
+                        let newProd = MobileCRM.DynamicEntity.createNew("msdyn_workorderproduct");
+                        let props = newProd.properties;
+
+                        let referenceProdId = aggRes[i].prodRefId;
+                        let referenceProdName = "product";
+                        if (referenceProdId != null) {
+                            refProd = new MobileCRM.Reference(referenceProdName, referenceProdId);
+                        }
+
+                        props.msdyn_name = aggRes[i].prodName;
+                        props.msdyn_unit = refUnit;
+                        props.msdyn_workorder = refWo;
+                        props.msdyn_pricelist = refPrice;
+                        props.msdyn_product = refProd;
+                        props.msdyn_quantity = aggRes[i].msdyn_quantity;
+                        props.msdyn_taxable = false;
+                        props.msdyn_linestatus = "690970001";
+                        props.msdyn_allocated = true;
+                        props.msdyn_unitamount = aggRes[i].prodPrice;
+                        props.msdyn_totalamount = aggRes[i].totalPrice;
+                        props.msdyn_unitcost = aggRes[i].prodPrice;
+                        props.msdyn_totalcost = aggRes[i].totalPrice;
+                        total += aggRes[i].totalPrice;
+                        console.log(total);
+
+                        newProd.save(function(err) {
+                            if (err) {
+                                MobileCRM.bridge.alert(err);
+                                }
+                            }
+                        );
+                    }
+                    MobileCRM.bridge.alert("Successfully consolidated");
+                    entityForm.entity.properties.msdyn_totalamount = total;
+                    console.log(entityForm.entity.properties.msdyn_totalamount);
+
+                    MobileCRM.UI.EntityForm.requestObject(function (entityForm){
+                        if(entityForm){
+                            MobileCRM.UI.EntityForm.save();
+                            console.log("success save");
+                        }
+                    },
+                    function(err){
+                        MobileCRM.bridge.alert("An error occurred: " + err);
+                    },
+                    null
+                );
+
+                })
+                .catch(function(err){
+                    MobileCRM.bridge.alert("Error fetching items: " + err);
+                });
+                itemArr = [];
+                aggItems = [];
+                
+        };
+
+        function saveForm() {
+            MobileCRM.UI.EntityForm.requestObject(
+                function (entityForm){
+                    if(entityForm){
+                        MobileCRM.UI.EntityForm.save();
+                        console.log("success save");
+                    }
+                },
+                function(err){
+                    MobileCRM.bridge.alert("An error occurred: " + err);
+                },
+                null
+            );
+        }
+
+    </script>
+</body>
+</html>

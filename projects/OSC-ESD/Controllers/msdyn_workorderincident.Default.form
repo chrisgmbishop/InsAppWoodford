@@ -1,0 +1,101 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>msdyn_workorderincident</EntityName>
+  <CamelCase>msdyn_workorderincident</CamelCase>
+  <WorkflowSave>&lt;Workflow e="true" isvalid="true" syntaxVersion="7" version="0"&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;customerAsset&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_customerasset&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_customerasset&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;definition e="false"&gt;
+      &lt;var&gt;workOrder&lt;/var&gt;
+      &lt;arg&gt;var:Entity.msdyn_workorder&lt;/arg&gt;
+      &lt;arg&gt;String:msdyn_workorder&lt;/arg&gt;
+      &lt;func&gt;LoadReference&lt;/func&gt;
+      &lt;type&gt;Entity&lt;/type&gt;
+    &lt;/definition&gt;
+    &lt;branch info="If CustomerAsset and WordOrder contain data" e="true"&gt;
+      &lt;if e="true"&gt;
+        &lt;conditions e="true" op="And"&gt;
+          &lt;group e="false" op="And"&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;customerAsset.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+            &lt;condition e="false"&gt;
+              &lt;var&gt;workOrder.@this&lt;/var&gt;
+              &lt;op&gt;ContainsData&lt;/op&gt;
+            &lt;/condition&gt;
+          &lt;/group&gt;
+        &lt;/conditions&gt;
+        &lt;action e="true"&gt;
+          &lt;branch info="If CustomerAsset's Account does not equal to WorkOrder's ServiceAccount" e="true"&gt;
+            &lt;if e="true"&gt;
+              &lt;conditions e="true" op="And"&gt;
+                &lt;condition e="false"&gt;
+                  &lt;var&gt;customerAsset.msdyn_account&lt;/var&gt;
+                  &lt;arg&gt;var:workOrder.msdyn_serviceaccount&lt;/arg&gt;
+                  &lt;op&gt;NotEqual&lt;/op&gt;
+                &lt;/condition&gt;
+              &lt;/conditions&gt;
+              &lt;action e="true"&gt;
+                &lt;function e="false"&gt;
+                  &lt;var&gt;ErrorMessage&lt;/var&gt;
+                  &lt;arg&gt;String:@Alert.CustomerAssetMustBeRelatedToServiceAccountOfWorkOrder&lt;/arg&gt;
+                  &lt;func&gt;Assign&lt;/func&gt;
+                &lt;/function&gt;
+              &lt;/action&gt;
+            &lt;/if&gt;
+          &lt;/branch&gt;
+        &lt;/action&gt;
+      &lt;/if&gt;
+    &lt;/branch&gt;
+  &lt;/Workflow&gt;</WorkflowSave>
+  <IsBulkUpdateForm>false</IsBulkUpdateForm>
+  <CacheMode>-1</CacheMode>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="msdyn_incidenttype"/>
+        <DetailItem SchemaName="msdyn_description"/>
+        <DetailItem SchemaName="msdyn_customerasset">
+          <LookupViews>&lt;extra&gt;&lt;filter entity="msdyn_customerasset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="msdyn_customerasset"&amp;gt;&amp;lt;link-entity name="account" alias="L0" from="accountid" to="msdyn_account" link-type="inner"&amp;gt;&amp;lt;link-entity name="msdyn_workorder" alias="L1" from="msdyn_serviceaccount" to="accountid" link-type="inner"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="msdyn_workorderid" operator="eq" value="{{msdyn_workorder}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="msdyn_estimatedduration"/>
+        <DetailItem SchemaName="msdyn_workorder"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Work Order Products List</Name>
+      <Binding SchemaName="msdyn_workorderproduct.msdyn_workorderincident"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>Work Order Service Tasks List</Name>
+      <Binding SchemaName="msdyn_workorderservicetask.msdyn_workorderincident"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\annotation@2x.png" IsIconNameReadOnly="0">
+      <Name>Notes List</Name>
+      <Binding SchemaName="annotation.objectid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\activity@2x.png" IsIconNameReadOnly="0">
+      <Name>Activity List</Name>
+      <Binding SchemaName="activity.regardingobjectid"/>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>WorkOrderIncident</Name>
+      <Url>file://WorkOrderIncident/WorkOrderIncident.html</Url>
+      <IsVisible>false</IsVisible>
+      <DelayLoad>false</DelayLoad>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

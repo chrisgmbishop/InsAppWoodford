@@ -1,0 +1,63 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>msdyn_customerasset</EntityName>
+    <CamelCase>msdyn_customerasset</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>Default</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>msdyn_name</OrderBy>
+  <SortAllowedFields>msdyn_account;msdyn_customerassetcategory;msdyn_functionallocation;msdyn_name</SortAllowedFields>
+  <FilterAllowedFields>msdyn_account;msdyn_customerassetcategory;msdyn_functionallocation</FilterAllowedFields>
+  <MultiSelectCommands>RunMobileReport||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>msdyn_account</string>
+    <string>btc_assetwebsite</string>
+    <string>msdyn_customerassetcategory</string>
+    <string>msdyn_customerassetid</string>
+    <string>msdyn_name</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="msdyn_customerasset">
+      <filter type="and">
+        <condition attribute="statecode" operator="eq" value="0"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <Search>
+    <attribute schema="msdyn_name" method="Contains"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>64</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="msdyn_account">
+          <StyleName>gray</StyleName>
+          <Bounds>17,40,152,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_name">
+          <StyleName>primary</StyleName>
+          <Bounds>17,14,295,27</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="msdyn_customerassetcategory">
+          <StyleName>r_gray</StyleName>
+          <Bounds>169,40,144,14</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>
